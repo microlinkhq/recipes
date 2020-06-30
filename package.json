@@ -2,7 +2,7 @@
   "name": "@microlink/recipes",
   "description": "A showcase of Microlink functionalities",
   "homepage": "https://microlink.io/recipes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/index.js",
   "author": {
     "email": "hello@microlink.io",
