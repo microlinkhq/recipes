@@ -3,12 +3,18 @@
   "description": "A showcase of Microlink functionalities",
   "homepage": "https://microlink.io/recipes",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": {
-    "name": "microlink.io",
     "email": "hello@microlink.io",
+    "name": "microlink.io",
     "url": "https://microlink.io"
   },
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/microlinkhq/microlinkhq/recipes.git"
@@ -27,6 +33,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
+    "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "coveralls": "latest",
     "finepack": "latest",
@@ -40,17 +47,14 @@
     "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "standard-version": "latest",
-    "ci-publish": "latest"
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 10"
   },
-  "ava": {
-    "files": [
-      "src/**/*.test.js"
-    ]
-  },
+  "files": [
+    "src/**/*.js"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
@@ -67,6 +71,11 @@
     "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
+  "ava": {
+    "files": [
+      "src/**/*.test.js"
+    ]
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -88,11 +97,5 @@
     "*.md": [
       "standard-markdown"
     ]
-  },
-  "contributors": [
-    {
-      "name": "Kiko Beats",
-      "email": "josefrancisco.verdu@gmail.com"
-    }
-  ]
+  }
 }
