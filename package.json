@@ -88,5 +88,11 @@
     "*.md": [
       "standard-markdown"
     ]
-  }
+  },
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    }
+  ]
 }
