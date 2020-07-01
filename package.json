@@ -3,7 +3,7 @@
   "description": "A showcase of Microlink functionalities",
   "homepage": "https://microlink.io/recipes",
   "version": "0.0.3",
-  "main": "src/index.js",
+  "main": "recipes",
   "author": {
     "email": "hello@microlink.io",
     "name": "microlink.io",
@@ -53,7 +53,7 @@
     "node": ">= 10"
   },
   "files": [
-    "src/**/*.js"
+    "recipes"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
@@ -71,11 +71,6 @@
     "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
-  "ava": {
-    "files": [
-      "src/**/*.test.js"
-    ]
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
