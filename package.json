@@ -40,6 +40,7 @@
     "git-authors-cli": "latest",
     "git-dirty": "latest",
     "husky": "latest",
+    "import-modules": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",

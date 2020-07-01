@@ -1,17 +1,20 @@
 'use strict'
 
+const importModules = require('import-modules')
 const test = require('ava')
 const ow = require('ow')
 
-const pccomponentes = require('../recipes/specific/pccomponentes')
-const hackerNews = require('../recipes/specific/hacker-news')
-const productHunt = require('../recipes/specific/produchunt')
-const instagram = require('../recipes/specific/instagram')
-const coolmod = require('../recipes/specific/coolmod')
-const twitter = require('../recipes/specific/twitter')
-const meetup = require('../recipes/specific/meetup')
-const gitHub = require('../recipes/specific/github')
-const wipoid = require('../recipes/specific/wipoid')
+const {
+  pccomponentes,
+  hackerNews,
+  produchunt,
+  instagram,
+  coolmod,
+  twitter,
+  meetup,
+  github,
+  wipoid
+} = importModules('../recipes/specific')
 
 const apiKey = process.env.MICROLINK_API_KEY
 
@@ -23,8 +26,8 @@ test('twitter', async t => {
   t.true(ow.isValid(data.stats.tweets, ow.number.finite))
 })
 
-test('producthunt', async t => {
-  const { data } = await productHunt('microlink-2-0', { apiKey })
+test('produchunt', async t => {
+  const { data } = await produchunt('microlink-2-0', { apiKey })
 
   t.true(ow.isValid(data.name, ow.string.not.empty))
   t.true(ow.isValid(data.upvotes, ow.string.not.empty))
@@ -71,7 +74,7 @@ test('hacker-news', async t => {
 })
 
 test('github', async t => {
-  const { data } = await gitHub('kikobeats', { apiKey })
+  const { data } = await github('kikobeats', { apiKey })
 
   t.true(ow.isValid(data.stats.followers, ow.number.finite))
   t.true(ow.isValid(data.stats.following, ow.number.finite))
