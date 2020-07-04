@@ -5,8 +5,9 @@ const mql = require('@microlink/mql')
 module.exports = async (url, opts) =>
   mql(url, {
     meta: false,
-    iframe: {
-      maxWidth: 350
+    insights: {
+      lighthouse: true,
+      technologies: false
     },
     ...opts
   })

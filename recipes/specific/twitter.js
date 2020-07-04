@@ -1,3 +1,5 @@
+'use strict'
+
 const mql = require('@microlink/mql')
 
 module.exports = (username, opts) =>
