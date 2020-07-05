@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (slug, opts) =>
-  mql(`https://www.wipoid.com/${slug}.html`, {
+module.exports = (url, opts) =>
+  mql(url, {
     data: {
       price: {
         selector: '#our_price_display',
@@ -13,3 +13,7 @@ module.exports = (slug, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = [
+  'https://www.wipoid.com/msi-mag-b550m-mortar-wifi.html'
+]

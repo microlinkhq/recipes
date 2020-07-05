@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (username, opts) =>
-  mql(`https://github.com/${username}`, {
+module.exports = (url, opts) =>
+  mql(url, {
     data: {
       stats: {
         selector: '.js-profile-editable-area',
@@ -25,3 +25,5 @@ module.exports = (username, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = ['https://github.com/kikobeats']

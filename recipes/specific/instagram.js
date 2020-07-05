@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (username, opts) =>
-  mql(`https://www.instagram.com/${username}`, {
+module.exports = (url, opts) =>
+  mql(url, {
     data: {
       avatar: {
         selector: 'meta[property="og:image"]',
@@ -13,3 +13,5 @@ module.exports = (username, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = ['https://www.instagram.com/willsmith']

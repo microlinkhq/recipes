@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = async (slug, opts) => {
-  const result = await mql(`https://www.coolmod.com/${slug}`, {
+module.exports = async (url, opts) => {
+  const result = await mql(url, {
     data: {
       price: {
         selector: '.container-price-total',
@@ -22,3 +22,7 @@ module.exports = async (slug, opts) => {
 
   return result
 }
+
+module.exports.examples = [
+  'https://www.coolmod.com/msi-mag-b550-tomahawk-socket-am4-placa-base-precio'
+]

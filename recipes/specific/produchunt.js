@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (postId, opts) =>
-  mql(`https://www.producthunt.com/posts/${postId}`, {
+module.exports = (url, opts) =>
+  mql(url, {
     data: {
       name: {
         selector: 'h1 a',
@@ -18,3 +18,5 @@ module.exports = (postId, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = ['https://www.producthunt.com/posts/microlink-2-0']

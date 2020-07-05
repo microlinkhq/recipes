@@ -2,9 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = async (slug, opts) =>
-  mql(`https://www.meetup.com/${slug}/`, {
-    adblock: false,
+module.exports = async (url, opts) =>
+  mql(url, {
     data: {
       members: {
         selector: '.groupHomeHeaderInfo-memberLink span',
@@ -29,3 +28,5 @@ module.exports = async (slug, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = ['https://www.meetup.com/Alicante-Frontend/']

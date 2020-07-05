@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (slug, opts) =>
-  mql(`https://www.pccomponentes.com/${slug}`, {
+module.exports = (url, opts) =>
+  mql(url, {
     data: {
       price: {
         selector: '#precio-main',
@@ -18,3 +18,7 @@ module.exports = (slug, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = [
+  'https://www.pccomponentes.com/msi-mag-b550-tomahawk'
+]

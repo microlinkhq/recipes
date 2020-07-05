@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (username, opts) =>
-  mql(`https://twitter.com/${username}`, {
+module.exports = (url, opts) =>
+  mql(url, {
     data: {
       stats: {
         selector: '.ProfileNav-list',
@@ -25,3 +25,5 @@ module.exports = (username, opts) =>
     },
     ...opts
   })
+
+module.exports.examples = ['https://twitter.com/microlinkhq']
