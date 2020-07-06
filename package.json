@@ -27,7 +27,7 @@
     "recipes"
   ],
   "dependencies": {
-    "@microlink/mql": "~0.7.1"
+    "@microlink/mql": "~0.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
