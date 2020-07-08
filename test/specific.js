@@ -1,6 +1,5 @@
 'use strict'
 
-const importModules = require('import-modules')
 const test = require('ava')
 const ow = require('ow')
 
@@ -14,7 +13,7 @@ const {
   meetup,
   github,
   wipoid
-} = importModules('../recipes/specific')
+} = require('../recipes/specific')
 
 const apiKey = process.env.MICROLINK_API_KEY
 

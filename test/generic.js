@@ -1,13 +1,15 @@
 'use strict'
 
 const demoLinks = require('@microlink/demo-links')
-const importModules = require('import-modules')
 const test = require('ava')
 const ow = require('ow')
 
-const { html, lighthouse, technologyStack, universalEmbed } = importModules(
-  '../recipes/generic'
-)
+const {
+  html,
+  lighthouse,
+  technologyStack,
+  universalEmbed
+} = require('../generic')
 
 const apiKey = process.env.MICROLINK_API_KEY
 
@@ -38,6 +40,5 @@ test('lighthouse', async t => {
 })
 
 test('html', async t => {
-  const { data } = await html('https://example.com')
-  t.true(data.html.startsWith('<!DOCTYPE'))
+  t.true((await html('https://example.com')).startsWith('<!DOCTYPE'))
 })
