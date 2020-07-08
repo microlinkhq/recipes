@@ -10,3 +10,9 @@ module.exports = async (url, opts) =>
     },
     ...opts
   })
+
+module.exports.info = {
+  name: 'Universal Embed',
+  description: 'Add embeddable media to your site',
+  examples: ['https://example.com']
+}

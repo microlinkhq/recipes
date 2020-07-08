@@ -5,11 +5,11 @@ const test = require('ava')
 const ow = require('ow')
 
 const {
-  html,
-  lighthouse,
+  retrieveHtml,
+  lighthouseReport,
   technologyStack,
   universalEmbed
-} = require('../generic')
+} = require('../by-feature')
 
 const apiKey = process.env.MICROLINK_API_KEY
 
@@ -30,15 +30,16 @@ test('universal embed', async t => {
 })
 
 test('technology stack', async t => {
-  const { data } = await technologyStack('https://microlink.io')
+  const { data } = await technologyStack(technologyStack.info.examples[0])
   t.true(ow.isValid(data.insights.technologies, ow.object.not.empty))
 })
 
 test('lighthouse', async t => {
-  const { data } = await lighthouse('https://microlink.io')
+  const { data } = await lighthouseReport(technologyStack.info.examples[0])
   t.true(ow.isValid(data.insights.lighthouse, ow.object.not.empty))
 })
 
 test('html', async t => {
-  t.true((await html('https://example.com')).startsWith('<!DOCTYPE'))
+  const html = await retrieveHtml(technologyStack.info.examples[0])
+  t.true(html.startsWith('<!DOCTYPE'))
 })

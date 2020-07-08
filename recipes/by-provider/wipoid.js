@@ -14,6 +14,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.examples = [
-  'https://www.wipoid.com/msi-mag-b550m-mortar-wifi.html'
-]
+module.exports.info = {
+  name: 'Wipoid',
+  examples: ['https://www.wipoid.com/msi-mag-b550m-mortar-wifi.html']
+}

@@ -26,4 +26,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.examples = ['https://github.com/kikobeats']
+module.exports.info = {
+  name: 'GitHub',
+  examples: ['https://github.com/kikobeats']
+}

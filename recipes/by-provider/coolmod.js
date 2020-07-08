@@ -23,6 +23,9 @@ module.exports = async (url, opts) => {
   return result
 }
 
-module.exports.examples = [
-  'https://www.coolmod.com/msi-mag-b550-tomahawk-socket-am4-placa-base-precio'
-]
+module.exports.info = {
+  name: 'Coolmod',
+  examples: [
+    'https://www.coolmod.com/msi-mag-b550-tomahawk-socket-am4-placa-base-precio'
+  ]
+}

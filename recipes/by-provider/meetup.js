@@ -29,4 +29,7 @@ module.exports = async (url, opts) =>
     ...opts
   })
 
-module.exports.examples = ['https://www.meetup.com/Alicante-Frontend/']
+module.exports.info = {
+  name: 'Meetup',
+  examples: ['https://www.meetup.com/Alicante-Frontend/']
+}

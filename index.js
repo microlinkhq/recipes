@@ -1,4 +1,4 @@
 module.exports = {
-  specific: require('./specific'),
-  generic: require('./generic')
+  byProvider: require('./by-provider'),
+  byFeature: require('./by-feature')
 }

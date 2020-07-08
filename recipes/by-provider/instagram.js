@@ -14,4 +14,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.examples = ['https://www.instagram.com/willsmith']
+module.exports.info = {
+  name: 'Instagram',
+  examples: ['https://www.instagram.com/willsmith']
+}

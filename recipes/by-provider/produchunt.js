@@ -19,4 +19,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.examples = ['https://www.producthunt.com/posts/microlink-2-0']
+module.exports.info = {
+  name: 'Product Hunt',
+  examples: ['https://www.producthunt.com/posts/microlink-2-0']
+}

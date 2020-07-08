@@ -11,3 +11,9 @@ module.exports = async (url, opts) =>
     },
     ...opts
   })
+
+module.exports.info = {
+  name: 'Technology Stack',
+  description: 'Detect the tech stack used in a site',
+  examples: ['https://example.com']
+}

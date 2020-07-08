@@ -24,4 +24,7 @@ module.exports = opts =>
     ...opts
   })
 
-module.exports.examples = ['https://news.ycombinator.com']
+module.exports.info = {
+  name: 'Hacker News',
+  examples: ['https://news.ycombinator.com']
+}

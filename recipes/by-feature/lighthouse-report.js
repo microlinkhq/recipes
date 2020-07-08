@@ -11,3 +11,9 @@ module.exports = async (url, opts) =>
     },
     ...opts
   })
+
+module.exports.info = {
+  name: 'Lighthouse Report',
+  description: 'Generate a Lighthouse full report',
+  examples: ['https://example.com']
+}
