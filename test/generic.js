@@ -5,7 +5,7 @@ const importModules = require('import-modules')
 const test = require('ava')
 const ow = require('ow')
 
-const { lighthouse, technologyStack, universalEmbed } = importModules(
+const { html, lighthouse, technologyStack, universalEmbed } = importModules(
   '../recipes/generic'
 )
 
@@ -35,4 +35,9 @@ test('technology stack', async t => {
 test('lighthouse', async t => {
   const { data } = await lighthouse('https://microlink.io')
   t.true(ow.isValid(data.insights.lighthouse, ow.object.not.empty))
+})
+
+test('html', async t => {
+  const { data } = await html('https://example.com')
+  t.true(data.html.startsWith('<!DOCTYPE'))
 })

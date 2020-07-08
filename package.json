@@ -3,7 +3,7 @@
   "description": "A showcase of Microlink functionalities",
   "homepage": "https://microlink.io/recipes",
   "version": "0.0.8",
-  "main": "recipes",
+  "main": "index.js",
   "author": {
     "email": "hello@microlink.io",
     "name": "microlink.io",
@@ -41,11 +41,10 @@
     "git-authors-cli": "latest",
     "git-dirty": "latest",
     "husky": "latest",
-    "import-modules": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
-    "ow": "~0.17.0",
+    "ow": "latest",
     "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
@@ -55,7 +54,10 @@
     "node": ">= 10"
   },
   "files": [
-    "recipes"
+    "generic.js",
+    "index.js",
+    "recipes",
+    "specific.js"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",

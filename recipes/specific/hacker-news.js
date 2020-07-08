@@ -23,3 +23,5 @@ module.exports = opts =>
     },
     ...opts
   })
+
+module.exports.examples = ['https://news.ycombinator.com']
