@@ -13,7 +13,7 @@ const {
   meetup,
   github,
   wipoid
-} = require('../recipes/specific')
+} = require('../specific')
 
 const apiKey = process.env.MICROLINK_API_KEY
 
