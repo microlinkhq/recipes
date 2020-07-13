@@ -54,10 +54,10 @@
     "node": ">= 10"
   },
   "files": [
-    "generic.js",
+    "by-feature.js",
+    "by-provider.js",
     "index.js",
-    "recipes",
-    "specific.js"
+    "recipes"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
