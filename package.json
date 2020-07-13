@@ -17,10 +17,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/microlinkhq/microlinkhq/recipes.git"
+    "url": "git+https://github.com/microlinkhq/recipes.git"
   },
   "bugs": {
-    "url": "https://github.com/microlinkhq/microlinkhq/recipes/issues"
+    "url": "https://github.com/microlinkhq/recipes/issues"
   },
   "keywords": [
     "microlink",
