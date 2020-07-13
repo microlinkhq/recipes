@@ -1,6 +1,6 @@
 {
   "name": "@microlink/recipes",
-  "description": "A showcase of Microlink functionalities",
+  "description": "Build something with just a few of lines",
   "homepage": "https://microlink.io/recipes",
   "version": "0.0.15",
   "main": "index.js",
