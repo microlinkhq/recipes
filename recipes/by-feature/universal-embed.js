@@ -13,6 +13,6 @@ module.exports = async (url, opts) =>
 
 module.exports.info = {
   name: 'Universal Embed',
-  description: 'Add embeddable media to your site',
+  description: 'Display embedded content, in a unified way',
   examples: ['https://example.com']
 }
