@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (url, opts) =>
-  mql(url, {
+module.exports = async (url, opts) => {
+  const result = await mql(url, {
     data: {
       results: {
         selectorAll: '.g',
@@ -31,6 +31,10 @@ module.exports = (url, opts) =>
     },
     ...opts
   })
+
+  result.data.results = result.data.results.filter(({ title }) => !!title)
+  return result
+}
 
 module.exports.meta = {
   name: 'Google',

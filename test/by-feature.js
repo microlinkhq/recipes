@@ -5,7 +5,7 @@ const test = require('ava')
 const ow = require('ow')
 
 const {
-  retrieveHtml,
+  getHtml,
   lighthouseReport,
   technologyStack,
   universalEmbed
@@ -30,16 +30,16 @@ test('universal embed', async t => {
 })
 
 test('technology stack', async t => {
-  const { data } = await technologyStack(technologyStack.info.examples[0])
+  const { data } = await technologyStack(technologyStack.meta.examples[0])
   t.true(ow.isValid(data.insights.technologies, ow.object.not.empty))
 })
 
 test('lighthouse', async t => {
-  const { data } = await lighthouseReport(technologyStack.info.examples[0])
+  const { data } = await lighthouseReport(technologyStack.meta.examples[0])
   t.true(ow.isValid(data.insights.lighthouse, ow.object.not.empty))
 })
 
-test('html', async t => {
-  const html = await retrieveHtml(technologyStack.info.examples[0])
+test('get html', async t => {
+  const html = await getHtml(technologyStack.meta.examples[0])
   t.true(html.startsWith('<!DOCTYPE'))
 })
