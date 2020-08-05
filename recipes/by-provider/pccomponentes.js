@@ -19,7 +19,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'PcComponentes',
   examples: ['https://www.pccomponentes.com/msi-mag-b550-tomahawk']
 }

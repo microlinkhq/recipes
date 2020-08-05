@@ -26,7 +26,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'GitHub',
   examples: ['https://github.com/kikobeats']
 }

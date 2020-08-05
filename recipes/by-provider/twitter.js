@@ -26,7 +26,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Twitter',
   examples: ['https://twitter.com/microlinkhq']
 }

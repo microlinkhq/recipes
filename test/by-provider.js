@@ -4,21 +4,22 @@ const test = require('ava')
 const ow = require('ow')
 
 const {
-  pccomponentes,
-  hackerNews,
-  produchunt,
-  instagram,
   coolmod,
-  twitter,
-  meetup,
   github,
+  google,
+  hackerNews,
+  instagram,
+  meetup,
+  pccomponentes,
+  produchunt,
+  twitter,
   wipoid
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
 
 test('twitter', async t => {
-  const { data } = await twitter(twitter.info.examples[0], { apiKey })
+  const { data } = await twitter(twitter.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.stats.followers, ow.number.finite))
   t.true(ow.isValid(data.stats.followings, ow.number.finite))
@@ -26,14 +27,14 @@ test('twitter', async t => {
 })
 
 test('produchunt', async t => {
-  const { data } = await produchunt(produchunt.info.examples[0], { apiKey })
+  const { data } = await produchunt(produchunt.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.name, ow.string.not.empty))
   t.true(ow.isValid(data.upvotes, ow.string.not.empty))
 })
 
 test('pccomponentes', async t => {
-  const { data } = await pccomponentes(pccomponentes.info.examples[0], {
+  const { data } = await pccomponentes(pccomponentes.meta.examples[0], {
     apiKey
   })
 
@@ -42,13 +43,13 @@ test('pccomponentes', async t => {
 })
 
 test('wipoid', async t => {
-  const { data } = await wipoid(wipoid.info.examples[0], { apiKey })
+  const { data } = await wipoid(wipoid.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.price, ow.number.finite))
 })
 
 test('meetup', async t => {
-  const { data } = await meetup(meetup.info.examples[0], { apiKey })
+  const { data } = await meetup(meetup.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.members, ow.string.not.empty))
 
@@ -60,7 +61,7 @@ test('meetup', async t => {
 })
 
 test('instagram', async t => {
-  const { data } = await instagram(instagram.info.examples[0], { apiKey })
+  const { data } = await instagram(instagram.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.avatar, ow.object.not.empty))
 })
@@ -75,7 +76,7 @@ test('hacker-news', async t => {
 })
 
 test('github', async t => {
-  const { data } = await github(github.info.examples[0], { apiKey })
+  const { data } = await github(github.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.stats.followers, ow.number.finite))
   t.true(ow.isValid(data.stats.following, ow.number.finite))
@@ -83,8 +84,19 @@ test('github', async t => {
 })
 
 test('coolmod', async t => {
-  const { data } = await coolmod(coolmod.info.examples[0], { apiKey })
+  const { data } = await coolmod(coolmod.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.price, ow.string.not.empty))
   t.true(ow.isValid(data.image, ow.object.not.empty))
+})
+
+test('google', async t => {
+  const { data } = await google(google.meta.examples[0], { apiKey })
+
+  data.results.forEach(result => {
+    t.true(ow.isValid(result.title, ow.string.not.empty))
+    t.true(ow.isValid(result.description, ow.string.not.empty))
+    t.true(ow.isValid(result.breadcumb, ow.string.not.empty))
+    t.true(ow.isValid(result.link, ow.string.not.empty))
+  })
 })

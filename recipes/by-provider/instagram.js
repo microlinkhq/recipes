@@ -14,7 +14,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Instagram',
   examples: ['https://www.instagram.com/willsmith']
 }

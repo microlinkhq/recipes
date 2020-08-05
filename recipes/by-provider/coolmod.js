@@ -23,7 +23,7 @@ module.exports = async (url, opts) => {
   return result
 }
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Coolmod',
   examples: [
     'https://www.coolmod.com/msi-mag-b550-tomahawk-socket-am4-placa-base-precio'

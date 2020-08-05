@@ -11,7 +11,7 @@ module.exports = async (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Universal Embed',
   description: 'Display embedded content, in a unified way',
   examples: ['https://example.com']

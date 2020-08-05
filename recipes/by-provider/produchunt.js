@@ -19,7 +19,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Product Hunt',
   examples: ['https://www.producthunt.com/posts/microlink-2-0']
 }
