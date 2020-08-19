@@ -2,8 +2,8 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = async (url, opts) =>
-  mql(url, {
+module.exports = async (url, opts) => {
+  const { data } = await mql(url, {
     meta: false,
     insights: {
       lighthouse: false,
@@ -11,6 +11,9 @@ module.exports = async (url, opts) =>
     },
     ...opts
   })
+
+  return data.insights.technologies
+}
 
 module.exports.meta = {
   name: 'Technology Stack',

@@ -1,6 +1,7 @@
 module.exports = {
-  technologyStack: require('./recipes/by-feature/technology-stack'),
+  fullPageScreenshot: require('./recipes/by-feature/fullpage-screenshot'),
+  getHtml: require('./recipes/by-feature/get-html'),
   lighthouseReport: require('./recipes/by-feature/lighthouse-report'),
-  universalEmbed: require('./recipes/by-feature/universal-embed'),
-  getHtml: require('./recipes/by-feature/get-html')
+  technologyStack: require('./recipes/by-feature/technology-stack'),
+  universalEmbed: require('./recipes/by-feature/universal-embed')
 }
