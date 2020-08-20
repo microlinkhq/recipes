@@ -3,6 +3,7 @@ module.exports = {
   github: require('./recipes/by-provider/github'),
   google: require('./recipes/by-provider/google'),
   hackerNews: require('./recipes/by-provider/hacker-news'),
+  imdb: require('./recipes/by-provider/imdb'),
   instagram: require('./recipes/by-provider/instagram'),
   meetup: require('./recipes/by-provider/meetup'),
   pccomponentes: require('./recipes/by-provider/pccomponentes'),

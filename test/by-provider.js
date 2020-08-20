@@ -8,6 +8,7 @@ const {
   github,
   google,
   hackerNews,
+  imdb,
   instagram,
   meetup,
   pccomponentes,
@@ -99,4 +100,15 @@ test('google', async t => {
     t.true(ow.isValid(result.breadcumb, ow.string.not.empty))
     t.true(ow.isValid(result.link, ow.string.not.empty))
   })
+})
+
+test('imdb', async t => {
+  const { data } = await imdb(imdb.meta.examples[0], { apiKey })
+
+  t.true(ow.isValid(data.director, ow.string.not.empty))
+  t.true(ow.isValid(data.writer, ow.string.not.empty))
+  t.true(ow.isValid(data.duration, ow.string.not.empty))
+  t.true(ow.isValid(data.release, ow.string.not.empty))
+  t.true(ow.isValid(data.rating, ow.string.not.empty))
+  t.true(ow.isValid(data.ratingCount, ow.string.not.empty))
 })
