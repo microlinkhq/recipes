@@ -14,7 +14,7 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Get HTML',
+  name: 'Fully Screenshot',
   description: 'Generate a full page screenshot over the target URL',
   examples: ['https://eosrei.github.io/emojione-color-font/full-demo.html']
 }

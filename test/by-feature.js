@@ -4,7 +4,7 @@ const test = require('ava')
 const ow = require('ow')
 
 const {
-  fullPageScreenshot,
+  fullyScreenshot,
   getHtml,
   lighthouseReport,
   technologyStack,
@@ -37,9 +37,7 @@ test('get html', async t => {
   t.true(html.startsWith('<!DOCTYPE'))
 })
 
-test('full page screenshot', async t => {
-  const screenshot = await fullPageScreenshot(
-    fullPageScreenshot.meta.examples[0]
-  )
+test('fully screenshot', async t => {
+  const screenshot = await fullyScreenshot(fullyScreenshot.meta.examples[0])
   t.true(ow.isValid(screenshot, ow.object.not.empty))
 })
