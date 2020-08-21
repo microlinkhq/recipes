@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.21](https://github.com/microlinkhq/recipes/compare/v0.0.20...v0.0.21) (2020-08-21)
+
+
+### Bug Fixes
+
+* path ([83147ac](https://github.com/microlinkhq/recipes/commit/83147ac9a2af6d8f7ab4c273ec7e8d78d326aa23))
+
 ### [0.0.20](https://github.com/microlinkhq/recipes/compare/v0.0.19...v0.0.20) (2020-08-21)
 
 ### [0.0.19](https://github.com/microlinkhq/recipes/compare/v0.0.18...v0.0.19) (2020-08-21)
