@@ -27,12 +27,12 @@
     "recipes"
   ],
   "dependencies": {
-    "@microlink/mql": "~0.7.4"
+    "@microlink/demo-links": "latest",
+    "@microlink/mql": "latest"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@microlink/demo-links": "latest",
     "ava": "latest",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
