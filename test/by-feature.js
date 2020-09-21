@@ -4,6 +4,7 @@ const test = require('ava')
 const ow = require('ow')
 
 const {
+  debugCss,
   fullyScreenshot,
   getHtml,
   lighthouseReport,
@@ -39,5 +40,10 @@ test('get html', async t => {
 
 test('fully screenshot', async t => {
   const screenshot = await fullyScreenshot(fullyScreenshot.meta.examples[0])
+  t.true(ow.isValid(screenshot, ow.object.not.empty))
+})
+
+test('debug css', async t => {
+  const screenshot = await debugCss(debugCss.meta.examples[0])
   t.true(ow.isValid(screenshot, ow.object.not.empty))
 })
