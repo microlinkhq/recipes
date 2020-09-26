@@ -2,15 +2,15 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = async (url, { scripts = [], ...opts } = {}) => {
+module.exports = async (url, opts = {}) => {
   const { data } = await mql(url, {
     meta: false,
     screenshot: true,
+    ...opts,
     scripts: [
-      ...scripts,
+      ...(opts.scripts || []),
       '[].forEach.call(document.querySelectorAll("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)})'
-    ],
-    ...opts
+    ]
   })
 
   return data.screenshot
