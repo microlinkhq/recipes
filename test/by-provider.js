@@ -115,7 +115,8 @@ test('imdb', async t => {
 })
 
 test('fca', async t => {
-  const { data } = await fca(fca.meta.examples[0])
+  const { data } = await fca(fca.meta.examples[0], { apiKey })
+
   t.true(ow.isValid(data.url, ow.string.not.empty))
   t.true(ow.isValid(data.name, ow.string.not.empty))
   t.true(ow.isValid(data.updatedAt, ow.string.not.empty))
