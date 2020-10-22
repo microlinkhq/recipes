@@ -1,5 +1,6 @@
 module.exports = {
   coolmod: require('./recipes/by-provider/coolmod'),
+  fca: require('./recipes/by-provider/fca'),
   github: require('./recipes/by-provider/github'),
   google: require('./recipes/by-provider/google'),
   hackerNews: require('./recipes/by-provider/hacker-news'),

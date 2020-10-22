@@ -14,7 +14,8 @@ const {
   pccomponentes,
   produchunt,
   twitter,
-  wipoid
+  wipoid,
+  fca
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -111,4 +112,16 @@ test('imdb', async t => {
   t.true(ow.isValid(data.release, ow.string.not.empty))
   t.true(ow.isValid(data.rating, ow.string.not.empty))
   t.true(ow.isValid(data.ratingCount, ow.string.not.empty))
+})
+
+test('fca', async t => {
+  const { data } = await fca(fca.meta.examples[0])
+  t.true(ow.isValid(data.url, ow.string.not.empty))
+  t.true(ow.isValid(data.name, ow.string.not.empty))
+  t.true(ow.isValid(data.updatedAt, ow.string.not.empty))
+  t.true(ow.isValid(data.address, ow.string.not.empty))
+  t.true(ow.isValid(data.firmReferenceNumber, ow.number.finite))
+  t.true(ow.isValid(data.registeredCompanyNumber, ow.number.finite))
+  t.true(ow.isValid(data.email, ow.string.not.empty))
+  t.true(ow.isValid(data.phone, ow.string.not.empty))
 })
