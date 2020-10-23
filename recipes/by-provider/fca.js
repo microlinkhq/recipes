@@ -4,7 +4,7 @@ const mql = require('@microlink/mql')
 
 module.exports = async (url, opts) => {
   const result = await mql(url, {
-    waitForSelector: 'h1',
+    waitForSelector: '#profile-header',
     meta: false,
     prerender: true,
     data: {
