@@ -6,7 +6,16 @@ module.exports = async (url, opts) => {
   const { data } = await mql(url, {
     meta: false,
     insights: {
-      lighthouse: true,
+      lighthouse: {
+        device: 'mobile',
+        onlyCategories: [
+          'performance',
+          'best-practices',
+          'accessibility',
+          'seo',
+          'pwa'
+        ]
+      },
       technologies: false
     },
     ...opts
