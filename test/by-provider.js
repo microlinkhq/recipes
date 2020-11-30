@@ -4,7 +4,9 @@ const test = require('ava')
 const ow = require('ow')
 
 const {
+  canopy,
   coolmod,
+  fca,
   github,
   google,
   hackerNews,
@@ -14,8 +16,7 @@ const {
   pccomponentes,
   produchunt,
   twitter,
-  wipoid,
-  fca
+  wipoid
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -125,4 +126,15 @@ test('fca', async t => {
   t.true(ow.isValid(data.registeredCompanyNumber, ow.number.finite))
   t.true(ow.isValid(data.email, ow.string.not.empty))
   t.true(ow.isValid(data.phone, ow.string.not.empty))
+})
+
+test('canopy', async t => {
+  const { data } = await canopy(canopy.meta.examples[0], { apiKey })
+
+  data.products.forEach(result => {
+    t.true(ow.isValid(result.title, ow.string.not.empty))
+    t.true(ow.isValid(result.url, ow.string.not.empty))
+    t.true(ow.isValid(result.amazonUrl, ow.string.not.empty))
+    t.true(ow.isValid(result.image, ow.string.not.empty))
+  })
 })
