@@ -5,6 +5,7 @@ const { default: ow } = require('ow')
 
 const {
   canopy,
+  codepen,
   coolmod,
   fca,
   github,
@@ -137,4 +138,9 @@ test('canopy', async t => {
     t.true(ow.isValid(result.amazonUrl, ow.string.not.empty))
     t.true(ow.isValid(result.image, ow.string.not.empty))
   })
+})
+
+test('codepen', async t => {
+  const { data } = await codepen(codepen.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.screenshot, ow.object.not.empty))
 })

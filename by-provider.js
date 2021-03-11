@@ -1,5 +1,6 @@
 module.exports = {
   canopy: require('./recipes/by-provider/canopy'),
+  codepen: require('./recipes/by-provider/codepen'),
   coolmod: require('./recipes/by-provider/coolmod'),
   fca: require('./recipes/by-provider/fca'),
   github: require('./recipes/by-provider/github'),
