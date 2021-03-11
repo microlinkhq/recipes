@@ -13,7 +13,7 @@ module.exports = async (url, opts) => {
             attr: 'text'
           },
           description: {
-            selector: '.g .s span.st',
+            selector: 'span',
             attr: 'text'
           },
           breadcumb: {

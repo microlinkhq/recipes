@@ -2,6 +2,7 @@ const mql = require('@microlink/mql')
 
 module.exports = (url, opts) =>
   mql(url, {
+    prerender: true,
     data: {
       products: {
         selectorAll: '.product-card',

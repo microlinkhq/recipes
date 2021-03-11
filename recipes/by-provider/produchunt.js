@@ -11,7 +11,7 @@ module.exports = (url, opts) =>
         type: 'string'
       },
       upvotes: {
-        selector: '.bigButtonCount_10448',
+        selector: 'button span span:nth-child(3)',
         attr: 'text',
         type: 'string'
       }

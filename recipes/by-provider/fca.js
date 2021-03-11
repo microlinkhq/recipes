@@ -27,9 +27,7 @@ module.exports = async (url, opts) => {
           '#who-is-this-details-content > div.stack.stack--direct.stack--medium > div.slds-grid.slds-wrap.gutters-large.gutters-medium_none > div:nth-child(2) > div > div > div:nth-child(2) > p'
       },
       registeredCompanyNumber: {
-        type: 'number',
-        selector:
-          '#who-is-this-details-content > div.stack.stack--direct.stack--medium > div.slds-grid.slds-wrap.gutters-large.gutters-medium_none > div:nth-child(2) > div > div > div:nth-child(3) > p'
+        selector: '.hide-href-print'
       },
       email: {
         selector:
@@ -48,6 +46,12 @@ module.exports = async (url, opts) => {
     },
     ...opts
   })
+
+  if (result.data.registeredCompanyNumber) {
+    result.data.registeredCompanyNumber = Number(
+      result.data.registeredCompanyNumber.split('<')[0]
+    )
+  }
 
   if (result.data.updatedAt) {
     result.data.updatedAt = result.data.updatedAt.split(':')[1].trim()

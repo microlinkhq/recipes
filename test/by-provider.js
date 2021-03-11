@@ -12,7 +12,6 @@ const {
   google,
   hackerNews,
   imdb,
-  instagram,
   meetup,
   pccomponentes,
   produchunt,
@@ -62,12 +61,6 @@ test('meetup', async t => {
     t.true(ow.isValid(post.link, ow.string.not.empty))
     t.true(ow.isValid(post.title, ow.string.not.empty))
   })
-})
-
-test('instagram', async t => {
-  const { data } = await instagram(instagram.meta.examples[0], { apiKey })
-
-  t.true(ow.isValid(data.avatar, ow.object.not.empty))
 })
 
 test('hacker-news', async t => {

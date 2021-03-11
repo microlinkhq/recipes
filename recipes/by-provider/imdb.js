@@ -6,11 +6,11 @@ module.exports = async (url, opts) => {
   const result = await mql(url, {
     data: {
       director: {
-        selector: '.credit_summary_item:first a',
+        selector: '.credit_summary_item:nth-child(2) a',
         type: 'text'
       },
       writer: {
-        selector: '.credit_summary_item:nth-child(2) a',
+        selector: '.credit_summary_item:nth-child(3) a',
         type: 'text'
       },
       duration: {
