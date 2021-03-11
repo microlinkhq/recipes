@@ -1,7 +1,7 @@
 'use strict'
 
 const test = require('ava')
-const ow = require('ow')
+const { default: ow } = require('ow')
 
 const {
   canopy,
