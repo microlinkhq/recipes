@@ -45,8 +45,8 @@ test('get html', async t => {
 })
 
 test('get favicon', async t => {
-  const favicon = await getFavicon(getFavicon.meta.examples[0], { apiKey })
-  t.true(!!favicon.url)
+  const faviconUrl = await getFavicon(getFavicon.meta.examples[0], { apiKey })
+  t.true(!!faviconUrl)
 })
 
 test('fully screenshot', async t => {
