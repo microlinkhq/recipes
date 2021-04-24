@@ -45,11 +45,7 @@ test('get html', async t => {
 })
 
 test('get favicon', async t => {
-  const favicon = await getFavicon(getFavicon.meta.examples[0], {
-    apiKey,
-    endpoint: 'http://localhost:3000'
-  })
-
+  const favicon = await getFavicon(getFavicon.meta.examples[0], { apiKey })
   t.true(!!favicon.url)
 })
 
