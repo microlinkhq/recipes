@@ -7,6 +7,7 @@ const {
   debugCss,
   fullyScreenshot,
   getHtml,
+  getFavicon,
   lighthouseReport,
   technologyStack,
   universalEmbed,
@@ -41,6 +42,15 @@ test('lighthouse report', async t => {
 test('get html', async t => {
   const html = await getHtml(getHtml.meta.examples[0], { apiKey })
   t.true(html.startsWith('<!DOCTYPE'))
+})
+
+test('get favicon', async t => {
+  const favicon = await getFavicon(getFavicon.meta.examples[0], {
+    apiKey,
+    endpoint: 'http://localhost:3000'
+  })
+
+  t.true(!!favicon.url)
 })
 
 test('fully screenshot', async t => {
