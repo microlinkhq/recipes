@@ -4,6 +4,7 @@ const test = require('ava')
 const { default: ow } = require('ow')
 
 const {
+  betalist,
   canopy,
   codepen,
   coolmod,
@@ -20,6 +21,18 @@ const {
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
+
+test('betalist', async t => {
+  const { data } = await betalist(betalist.meta.examples[0], { apiKey })
+
+  data.startups.forEach(startup => {
+    console.log(startup)
+    t.true(ow.isValid(startup.name, ow.string.not.empty))
+    t.true(ow.isValid(startup.url, ow.string.not.empty))
+    t.true(ow.isValid(startup.description, ow.string.not.empty))
+    t.true(ow.isValid(startup.image, ow.string.not.empty))
+  })
+})
 
 test('twitter', async t => {
   const { data } = await twitter(twitter.meta.examples[0], { apiKey })
