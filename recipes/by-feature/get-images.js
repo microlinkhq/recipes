@@ -5,7 +5,6 @@ const mql = require('@microlink/mql')
 module.exports = async (url, opts) => {
   const { data } = await mql(url, {
     meta: false,
-    prerender: false,
     data: {
       images: {
         selectorAll: 'img',
