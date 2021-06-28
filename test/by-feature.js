@@ -6,12 +6,13 @@ const { default: ow } = require('ow')
 const {
   debugCss,
   fullyScreenshot,
-  getHtml,
   getFavicon,
+  getHtml,
+  getImages,
+  jsonLd,
   lighthouseReport,
   technologyStack,
-  universalEmbed,
-  jsonLd
+  universalEmbed
 } = require('../by-feature')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -47,6 +48,17 @@ test('get html', async t => {
 test('get favicon', async t => {
   const faviconUrl = await getFavicon(getFavicon.meta.examples[0], { apiKey })
   t.true(!!faviconUrl)
+})
+
+test('get images', async t => {
+  const images = await getImages(getImages.meta.examples[0], { apiKey })
+
+  images.forEach(image => {
+    t.true(ow.isValid(image.url, ow.string.not.empty))
+    t.true(ow.isValid(image.type, ow.string.not.empty))
+    t.true(ow.isValid(image.size, ow.number.finite))
+    t.true(ow.isValid(image.size_pretty, ow.string.not.empty))
+  })
 })
 
 test('fully screenshot', async t => {

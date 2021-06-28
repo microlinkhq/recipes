@@ -26,7 +26,6 @@ test('betalist', async t => {
   const { data } = await betalist(betalist.meta.examples[0], { apiKey })
 
   data.startups.forEach(startup => {
-    console.log(startup)
     t.true(ow.isValid(startup.name, ow.string.not.empty))
     t.true(ow.isValid(startup.url, ow.string.not.empty))
     t.true(ow.isValid(startup.description, ow.string.not.empty))
