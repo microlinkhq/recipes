@@ -36,14 +36,11 @@
     "ava": "latest",
     "ci-publish": "latest",
     "conventional-github-releaser": "latest",
-    "coveralls": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
-    "git-dirty": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
-    "ow": "latest",
     "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
@@ -84,7 +81,7 @@
     "package.json": [
       "finepack"
     ],
-    "*.js": [
+    "*.js,!*.min.js,": [
       "prettier-standard"
     ],
     "*.md": [
