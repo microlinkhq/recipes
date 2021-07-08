@@ -16,6 +16,7 @@ const {
   meetup,
   pccomponentes,
   produchunt,
+  telegram,
   twitter,
   wipoid
 } = require('../by-provider')
@@ -148,4 +149,11 @@ test('canopy', async t => {
 test('codepen', async t => {
   const { data } = await codepen(codepen.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.screenshot, ow.object.not.empty))
+})
+
+test('telegram', async t => {
+  const { data } = await telegram(telegram.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.subscribers, ow.number.finite))
+  t.true(ow.isValid(data.photos, ow.number.finite))
+  t.true(ow.isValid(data.links, ow.string.not.empty))
 })
