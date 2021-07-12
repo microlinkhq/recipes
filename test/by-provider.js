@@ -18,7 +18,8 @@ const {
   produchunt,
   telegram,
   twitter,
-  wipoid
+  wipoid,
+  reddit
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -156,4 +157,11 @@ test('telegram', async t => {
   t.true(ow.isValid(data.subscribers, ow.number.finite))
   t.true(ow.isValid(data.photos, ow.number.finite))
   t.true(ow.isValid(data.links, ow.string.not.empty))
+})
+
+test('reddit', async t => {
+  const { data } = await reddit(reddit.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.karma, ow.number.finite))
+  t.true(ow.isValid(data.birthday, ow.string.not.empty))
+  t.true(ow.isValid(data.avatar, ow.object.not.empty))
 })

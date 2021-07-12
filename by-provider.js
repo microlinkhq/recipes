@@ -10,8 +10,9 @@ module.exports = {
   imdb: require('./recipes/by-provider/imdb'),
   meetup: require('./recipes/by-provider/meetup'),
   pccomponentes: require('./recipes/by-provider/pccomponentes'),
-  telegram: require('./recipes/by-provider/telegram'),
   produchunt: require('./recipes/by-provider/produchunt'),
+  reddit: require('./recipes/by-provider/reddit'),
+  telegram: require('./recipes/by-provider/telegram'),
   twitter: require('./recipes/by-provider/twitter'),
   wipoid: require('./recipes/by-provider/wipoid')
 }
