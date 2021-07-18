@@ -61,8 +61,8 @@ test('meetup', async t => {
 
 test('instagram', async t => {
   const { data } = await instagram(instagram.info.examples[0], { apiKey })
-
   t.true(ow.isValid(data.avatar, ow.object.not.empty))
+  t.true(ow.isValid(data.photos, ow.object.not.empty))
 })
 
 test('hacker-news', async t => {

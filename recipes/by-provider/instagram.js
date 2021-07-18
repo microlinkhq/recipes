@@ -9,6 +9,11 @@ module.exports = (url, opts) =>
         selector: 'meta[property="og:image"]',
         attr: 'content',
         type: 'image'
+      },
+      photos: {
+        selectorAll: 'a img',
+        attr: 'src',
+        type: 'image'
       }
     },
     ...opts
