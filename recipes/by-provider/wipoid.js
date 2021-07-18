@@ -14,7 +14,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Wipoid',
   examples: ['https://www.wipoid.com/msi-mag-b550m-mortar-wifi.html']
 }

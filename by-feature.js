@@ -1,6 +1,11 @@
 module.exports = {
-  technologyStack: require('./recipes/by-feature/technology-stack'),
+  debugCss: require('./recipes/by-feature/debug-css'),
+  fullyScreenshot: require('./recipes/by-feature/fully-screenshot'),
+  getFavicon: require('./recipes/by-feature/get-favicon'),
+  getHtml: require('./recipes/by-feature/get-html'),
+  getImages: require('./recipes/by-feature/get-images'),
+  jsonLd: require('./recipes/by-feature/json-ld'),
   lighthouseReport: require('./recipes/by-feature/lighthouse-report'),
-  universalEmbed: require('./recipes/by-feature/universal-embed'),
-  retrieveHtml: require('./recipes/by-feature/retrieve-html')
+  technologyStack: require('./recipes/by-feature/technology-stack'),
+  universalEmbed: require('./recipes/by-feature/universal-embed')
 }

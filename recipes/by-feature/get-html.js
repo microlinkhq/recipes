@@ -16,8 +16,8 @@ module.exports = async (url, opts) => {
   return data.html
 }
 
-module.exports.info = {
-  name: 'Retrieve HTML',
-  description: 'Get all the HTML markup of the target URL',
+module.exports.meta = {
+  name: 'Get HTML',
+  description: 'Retrieve all the HTML markup of the target URL',
   examples: ['https://example.com']
 }

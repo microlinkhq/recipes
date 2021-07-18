@@ -2,6 +2,81 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/microlinkhq/recipes/compare/v1.1.0...v1.1.1) (2021-07-12)
+
+## [1.1.0](https://github.com/microlinkhq/recipes/compare/v1.0.3...v1.1.0) (2021-07-08)
+
+
+### Features
+
+* add telegram recipe ([bef7497](https://github.com/microlinkhq/recipes/commit/bef749799a47a5f004e1e2bca592916cce04fa08))
+
+### [1.0.3](https://github.com/microlinkhq/recipes/compare/v1.0.2...v1.0.3) (2021-06-28)
+
+
+### Bug Fixes
+
+* avoid to force prerendering ([4fc03c6](https://github.com/microlinkhq/recipes/commit/4fc03c6c19bf97a8eaafeb6c1d0d4ffb42723c46))
+
+### [1.0.2](https://github.com/microlinkhq/recipes/compare/v1.0.1...v1.0.2) (2021-06-28)
+
+### [1.0.1](https://github.com/microlinkhq/recipes/compare/v1.0.0...v1.0.1) (2021-06-25)
+
+## [1.0.0](https://github.com/microlinkhq/recipes/compare/v0.0.32...v1.0.0) (2021-04-24)
+
+
+### Bug Fixes
+
+* debug ([207283c](https://github.com/microlinkhq/recipes/commit/207283cc1bdbc5aa26f222fee2af6899eab76fde))
+* test ([be86ba5](https://github.com/microlinkhq/recipes/commit/be86ba548c3b386ef7e6a2f4f5ec4f49faf3e2a0))
+
+### [0.0.32](https://github.com/microlinkhq/recipes/compare/v0.0.31...v0.0.32) (2021-03-11)
+
+### [0.0.31](https://github.com/microlinkhq/recipes/compare/v0.0.30...v0.0.31) (2020-11-30)
+
+### [0.0.30](https://github.com/microlinkhq/recipes/compare/v0.0.29...v0.0.30) (2020-11-30)
+
+### [0.0.29](https://github.com/microlinkhq/recipes/compare/v0.0.28...v0.0.29) (2020-11-30)
+
+### [0.0.28](https://github.com/microlinkhq/recipes/compare/v0.0.27...v0.0.28) (2020-11-10)
+
+### [0.0.27](https://github.com/microlinkhq/recipes/compare/v0.0.26...v0.0.27) (2020-10-23)
+
+### [0.0.26](https://github.com/microlinkhq/recipes/compare/v0.0.25...v0.0.26) (2020-10-22)
+
+### [0.0.25](https://github.com/microlinkhq/recipes/compare/v0.0.24...v0.0.25) (2020-10-22)
+
+### [0.0.24](https://github.com/microlinkhq/recipes/compare/v0.0.23...v0.0.24) (2020-09-26)
+
+### [0.0.23](https://github.com/microlinkhq/recipes/compare/v0.0.22...v0.0.23) (2020-09-22)
+
+### [0.0.22](https://github.com/microlinkhq/recipes/compare/v0.0.21...v0.0.22) (2020-09-16)
+
+
+### Bug Fixes
+
+* add missing dependency ([68dbd80](https://github.com/microlinkhq/recipes/commit/68dbd80335a5aa3736b630256d23f85dedbabad1))
+
+### [0.0.21](https://github.com/microlinkhq/recipes/compare/v0.0.20...v0.0.21) (2020-08-21)
+
+
+### Bug Fixes
+
+* path ([83147ac](https://github.com/microlinkhq/recipes/commit/83147ac9a2af6d8f7ab4c273ec7e8d78d326aa23))
+
+### [0.0.20](https://github.com/microlinkhq/recipes/compare/v0.0.19...v0.0.20) (2020-08-21)
+
+### [0.0.19](https://github.com/microlinkhq/recipes/compare/v0.0.18...v0.0.19) (2020-08-21)
+
+### [0.0.18](https://github.com/microlinkhq/recipes/compare/v0.0.17...v0.0.18) (2020-08-09)
+
+### [0.0.17](https://github.com/microlinkhq/recipes/compare/v0.0.16...v0.0.17) (2020-08-05)
+
+
+### Bug Fixes
+
+* pitfalls ([e79cef9](https://github.com/microlinkhq/recipes/commit/e79cef952f83a13440391194d16d6d44c8841e8e))
+
 ### [0.0.16](https://github.com/microlinkhq/recipes/compare/v0.0.15...v0.0.16) (2020-07-13)
 
 ### [0.0.15](https://github.com/microlinkhq/recipes/compare/v0.0.14...v0.0.15) (2020-07-13)

@@ -24,7 +24,7 @@ module.exports = opts =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Hacker News',
   examples: ['https://news.ycombinator.com']
 }

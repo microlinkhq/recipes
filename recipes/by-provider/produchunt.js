@@ -11,7 +11,7 @@ module.exports = (url, opts) =>
         type: 'string'
       },
       upvotes: {
-        selector: '.bigButtonCount_10448',
+        selector: 'button span span:nth-child(3)',
         attr: 'text',
         type: 'string'
       }
@@ -19,7 +19,7 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+module.exports.meta = {
   name: 'Product Hunt',
   examples: ['https://www.producthunt.com/posts/microlink-2-0']
 }

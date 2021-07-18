@@ -2,23 +2,21 @@
 
 const mql = require('@microlink/mql')
 
-module.exports = (url, opts) =>
-  mql(url, {
+module.exports = async (url, opts) => {
+  const result = await mql(url, {
     data: {
       stats: {
-        selector: '.ProfileNav-list',
+        selector: 'main',
         attr: {
           tweets: {
-            selector: '.ProfileNav-item--tweets .ProfileNav-value',
-            attr: 'data-count'
+            selector:
+              '[data-testid="titleContainer"] div[dir="auto"]:nth-child(2)'
           },
           followings: {
-            selector: '.ProfileNav-item--following .ProfileNav-value',
-            attr: 'data-count'
+            selector: 'a[href*="following"] span span'
           },
           followers: {
-            selector: '.ProfileNav-item--followers .ProfileNav-value',
-            attr: 'data-count'
+            selector: 'a[href*="followers"] span span'
           }
         }
       }
@@ -26,7 +24,16 @@ module.exports = (url, opts) =>
     ...opts
   })
 
-module.exports.info = {
+  if (result.data.stats.tweets) {
+    result.data.stats.tweets = Number(
+      result.data.stats.tweets.replace(' Tweets', '')
+    )
+  }
+
+  return result
+}
+
+module.exports.meta = {
   name: 'Twitter',
   examples: ['https://twitter.com/microlinkhq']
 }
