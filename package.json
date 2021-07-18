@@ -41,6 +41,7 @@
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
+    "ow": "latest",
     "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",

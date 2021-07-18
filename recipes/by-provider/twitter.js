@@ -9,8 +9,7 @@ module.exports = async (url, opts) => {
         selector: 'main',
         attr: {
           tweets: {
-            selector:
-              '[data-testid="titleContainer"] div[dir="auto"]:nth-child(2)'
+            selector: 'div > div > div > div h2 + div'
           },
           followings: {
             selector: 'a[href*="following"] span span'

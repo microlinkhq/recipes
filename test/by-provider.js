@@ -1,7 +1,7 @@
 'use strict'
 
+const { default: ow } = require('ow')
 const test = require('ava')
-const ow = require('ow')
 
 const {
   betalist,
@@ -15,7 +15,6 @@ const {
   imdb,
   instagram,
   meetup,
-  pccomponentes,
   produchunt,
   reddit,
   telegram,
@@ -51,15 +50,6 @@ test('produchunt', async t => {
   t.true(ow.isValid(data.upvotes, ow.string.not.empty))
 })
 
-test('pccomponentes', async t => {
-  const { data } = await pccomponentes(pccomponentes.meta.examples[0], {
-    apiKey
-  })
-
-  t.true(ow.isValid(data.price, ow.number.finite))
-  t.true(ow.isValid(data.image, ow.object.not.empty))
-})
-
 test('wipoid', async t => {
   const { data } = await wipoid(wipoid.meta.examples[0], { apiKey })
 
@@ -78,9 +68,9 @@ test('meetup', async t => {
 })
 
 test('instagram', async t => {
-  const { data } = await instagram(instagram.info.examples[0], { apiKey })
+  const { data } = await instagram(instagram.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.avatar, ow.object.not.empty))
-  t.true(ow.isValid(data.photos, ow.object.not.empty))
+  t.true(ow.isValid(data.stats, ow.object.not.empty))
 })
 
 test('hacker-news', async t => {
@@ -124,7 +114,7 @@ test('imdb', async t => {
   t.true(ow.isValid(data.director, ow.string.not.empty))
   t.true(ow.isValid(data.writer, ow.string.not.empty))
   t.true(ow.isValid(data.duration, ow.string.not.empty))
-  t.true(ow.isValid(data.release, ow.string.not.empty))
+  t.true(ow.isValid(data.year, ow.number.finite))
   t.true(ow.isValid(data.rating, ow.string.not.empty))
   t.true(ow.isValid(data.ratingCount, ow.string.not.empty))
 })

@@ -6,27 +6,28 @@ module.exports = async (url, opts) => {
   const result = await mql(url, {
     data: {
       director: {
-        selector: '.credit_summary_item:nth-child(2) a',
+        selector: '.ipc-metadata-list__item:nth-child(1) a',
         type: 'text'
       },
       writer: {
-        selector: '.credit_summary_item:nth-child(3) a',
+        selector: '.ipc-metadata-list__item:nth-child(2) a',
         type: 'text'
       },
       duration: {
-        selector: '.title_wrapper time',
+        selector: '.ipc-inline-list__item[role="presentation"]:nth-child(3)',
         type: 'text'
       },
-      release: {
-        selector: '.title_wrapper a:nth-child(7)',
-        type: 'text'
+      year: {
+        selector:
+          '.ipc-inline-list__item[role="presentation"]:nth-child(1) span',
+        type: 'number'
       },
       rating: {
-        selector: 'span[itemprop="ratingValue"]',
+        selector: '.rating-bar__base-button .ipc-button__text span',
         type: 'text'
       },
       ratingCount: {
-        selector: 'span[itemprop="ratingCount"]',
+        selector: '.rating-bar__base-button .ipc-button__text div:nth-child(3)',
         type: 'text'
       }
     },
@@ -34,7 +35,6 @@ module.exports = async (url, opts) => {
   })
 
   if (result.data.rating) result.data.rating += ' of 10'
-  if (result.data.release) result.data.release = result.data.release.trim()
   if (result.data.duration) result.data.duration = result.data.duration.trim()
   return result
 }
