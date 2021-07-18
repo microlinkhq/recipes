@@ -17,14 +17,14 @@ const {
 
 const apiKey = process.env.MICROLINK_API_KEY
 
-test('universal embed', async t => {
-  for (const url of universalEmbed.meta.examples) {
+for (const url of universalEmbed.meta.examples) {
+  test(`universal embed for ${url}`, async t => {
     const iframe = await universalEmbed(url, { apiKey })
-    t.true(ow.isValid(iframe, ow.object.not.empty), url)
-    t.true(ow.isValid(iframe.html, ow.string.not.empty), url)
+    t.true(ow.isValid(iframe, ow.object.not.empty))
+    t.true(ow.isValid(iframe.html, ow.string.not.empty))
     t.true(iframe.html.includes('width="350"'), url)
-  }
-})
+  })
+}
 
 test('technology stack', async t => {
   const technologies = await technologyStack(technologyStack.meta.examples[0], {
