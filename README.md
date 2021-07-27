@@ -1,5 +1,7 @@
 <div align="center">
   <img src="https://cdn.microlink.io/logo/banner.png" alt="microlink cdn">
+  <br>
+  <br>
 </div>
 
 ![Last version](https://img.shields.io/github/tag/microlinkhq/recipes.svg?style=flat-square)
