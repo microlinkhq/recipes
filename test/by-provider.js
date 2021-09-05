@@ -38,6 +38,7 @@ test('betalist', async t => {
 test('twitter', async t => {
   const { data } = await twitter(twitter.meta.examples[0], { apiKey })
 
+  t.true(ow.isValid(data.latestTweets, ow.array.ofType(ow.string.not.empty)))
   t.true(ow.isValid(data.stats.followers, ow.number.finite))
   t.true(ow.isValid(data.stats.followings, ow.number.finite))
   t.true(ow.isValid(data.stats.tweets, ow.number.finite))
