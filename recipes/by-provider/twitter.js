@@ -6,8 +6,7 @@ module.exports = async (url, opts) => {
   const result = await mql(url, {
     data: {
       latestTweets: {
-        selectorAll:
-          'main > div > div > div > div > div > div:nth-child(2) > div > div > div article > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)',
+        selectorAll: 'div[lang="en"]',
         attr: 'text'
       },
       stats: {
