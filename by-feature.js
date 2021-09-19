@@ -1,6 +1,7 @@
 module.exports = {
   debugCss: require('./recipes/by-feature/debug-css'),
   fullyScreenshot: require('./recipes/by-feature/fully-screenshot'),
+  getExcerpt: require('./recipes/by-feature/get-excerpt'),
   getFavicon: require('./recipes/by-feature/get-favicon'),
   getHtml: require('./recipes/by-feature/get-html'),
   getImages: require('./recipes/by-feature/get-images'),

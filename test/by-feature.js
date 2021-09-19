@@ -8,6 +8,7 @@ const {
   fullyScreenshot,
   getFavicon,
   getHtml,
+  getExcerpt,
   getImages,
   jsonLd,
   lighthouseReport,
@@ -43,6 +44,11 @@ test('lighthouse report', async t => {
 test('get html', async t => {
   const html = await getHtml(getHtml.meta.examples[0], { apiKey })
   t.true(html.startsWith('<!DOCTYPE'))
+})
+
+test('get excerpt', async t => {
+  const excerpt = await getExcerpt(getExcerpt.meta.examples[0], { apiKey })
+  t.true(!!excerpt)
 })
 
 test('get favicon', async t => {
