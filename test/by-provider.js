@@ -149,8 +149,8 @@ test('canopy', async t => {
 })
 
 test('codepen', async t => {
-  const { data } = await codepen(codepen.meta.examples[0], { apiKey })
-  t.true(ow.isValid(data.screenshot, ow.object.not.empty))
+  const screenshotUrl = await codepen(codepen.meta.examples[0], { apiKey })
+  t.true(ow.isValid(screenshotUrl, ow.string.not.empty))
 })
 
 test('telegram', async t => {
