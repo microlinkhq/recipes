@@ -15,5 +15,5 @@ module.exports = async (url, opts) => {
 
 module.exports.meta = {
   name: 'CodePen',
-  examples: ['https://codepen.io/carolineartz/full/rNaGQYo']
+  examples: ['https://codepen.io/fossheim/full/oNjxrZa']
 }
