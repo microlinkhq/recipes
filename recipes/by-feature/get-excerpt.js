@@ -1,33 +1,28 @@
 'use strict'
 
-const mql = require('@microlink/mql')
+const microlink = require('@microlink/function')
 
-module.exports = async (url, opts) => {
-  const { data } = await mql(url, {
-    meta: false,
-    data: {
-      excerpt: {
-        evaluate: async () => {
-          const response = await window.fetch(
-            'https://cdn.jsdelivr.net/npm/@mozilla/readability/Readability.js'
-          )
-          const script = await response.text()
-          window.eval(script) // eslint-disable-line no-eval
-          const reader = new window.Readability(window.document)
-          return reader.parse().excerpt
-        }
-      }
-    },
-    ...opts
+const getExcerpt = microlink(async ({ query, page }) => {
+  const { Readability } = require('@mozilla/readability')
+  const { JSDOM, VirtualConsole } = require('jsdom')
+
+  const html = await page.content()
+  const dom = new JSDOM(html, {
+    url: query.url,
+    virtualConsole: new VirtualConsole()
   })
 
-  return data.excerpt
-}
+  const reader = new Readability(dom.window.document)
+  return reader.parse().excerpt
+})
+
+const toValue = fn => async (...args) =>
+  fn(...args).then(({ isFulfilled, value }) => (isFulfilled ? value : null))
+
+module.exports = toValue(getExcerpt)
 
 module.exports.meta = {
   name: 'Get Excerpt',
   description: 'Short extract resume for any website',
-  examples: [
-    'https://levelup.gitconnected.com/how-to-load-external-javascript-files-from-the-browser-console-8eb97f7db778'
-  ]
+  examples: ['https://fithero.app']
 }

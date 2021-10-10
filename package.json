@@ -28,6 +28,7 @@
   ],
   "dependencies": {
     "@microlink/demo-links": "latest",
+    "@microlink/function": "latest",
     "@microlink/mql": "latest"
   },
   "devDependencies": {

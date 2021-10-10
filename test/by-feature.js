@@ -48,7 +48,7 @@ test('get html', async t => {
 
 test('get excerpt', async t => {
   const excerpt = await getExcerpt(getExcerpt.meta.examples[0], { apiKey })
-  t.true(!!excerpt)
+  t.true(ow.isValid(excerpt, ow.string.not.empty))
 })
 
 test('get favicon', async t => {
