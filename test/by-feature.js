@@ -9,6 +9,7 @@ const {
   getFavicon,
   getHtml,
   getExcerpt,
+  getEmails,
   getImages,
   jsonLd,
   lighthouseReport,
@@ -47,8 +48,15 @@ test('get html', async t => {
 })
 
 test('get excerpt', async t => {
-  const excerpt = await getExcerpt(getExcerpt.meta.examples[0], { apiKey })
+  const { value: excerpt } = await getExcerpt(getExcerpt.meta.examples[0], {
+    apiKey
+  })
   t.true(ow.isValid(excerpt, ow.string.not.empty))
+})
+
+test('get emails', async t => {
+  const emails = await getEmails(getEmails.meta.examples[0], { apiKey })
+  t.true(ow.isValid(emails, ow.array.not.empty))
 })
 
 test('get favicon', async t => {
