@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/microlinkhq/recipes/compare/v1.2.0...v1.2.1) (2021-10-24)
+
+
+### Bug Fixes
+
+* define function as text ([46c99a5](https://github.com/microlinkhq/recipes/commit/46c99a54d48fae10c2bb9b485b2f5c019e674c9d))
+
 ## [1.2.0](https://github.com/microlinkhq/recipes/compare/v1.1.9...v1.2.0) (2021-10-12)
 
 
