@@ -2,7 +2,7 @@
 
 const microlink = require('@microlink/function')
 
-module.exports = microlink(async ({ query, page }) => {
+module.exports = microlink(`async ({ query, page }) => {
   const { Readability } = require('@mozilla/readability')
   const { JSDOM, VirtualConsole } = require('jsdom')
 
@@ -14,7 +14,7 @@ module.exports = microlink(async ({ query, page }) => {
 
   const reader = new Readability(dom.window.document)
   return reader.parse().excerpt
-})
+}`)
 
 module.exports.meta = {
   name: 'Get Excerpt',
