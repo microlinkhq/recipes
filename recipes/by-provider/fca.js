@@ -61,6 +61,6 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Financial Conduct Authority',
+  name: 'FCA',
   examples: ['https://register.fca.org.uk/s/firm?id=001b000000NMdXdAAL']
 }
