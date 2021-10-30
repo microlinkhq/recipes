@@ -12,7 +12,7 @@ const {
   getEmails,
   getImages,
   jsonLd,
-  lighthouseReport,
+  lighthouse,
   technologyStack,
   universalEmbed
 } = require('../by-feature')
@@ -35,8 +35,8 @@ test('technology stack', async t => {
   t.true(ow.isValid(technologies, ow.object.not.empty))
 })
 
-test('lighthouse report', async t => {
-  const report = await lighthouseReport(lighthouseReport.meta.examples[0], {
+test('lighthouse', async t => {
+  const report = await lighthouse(lighthouse.meta.examples[0], {
     apiKey
   })
   t.true(ow.isValid(report, ow.object.not.empty))
