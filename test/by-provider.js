@@ -4,6 +4,7 @@ const { default: ow } = require('ow')
 const test = require('ava')
 
 const {
+  balenciaga,
   betalist,
   canopy,
   codepen,
@@ -18,11 +19,11 @@ const {
   produchunt,
   reddit,
   soundcloud,
+  spotify,
   telegram,
   twitter,
   wipoid,
-  youtube,
-  spotify
+  youtube
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -186,4 +187,10 @@ test('soundcloud', async t => {
 test('spotify', async t => {
   const { data } = await spotify(spotify.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.audio, ow.object.not.empty))
+})
+
+test('balenciaga', async t => {
+  const { data } = await balenciaga(balenciaga.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.price, ow.number.finite))
+  t.true(ow.isValid(data.currency, ow.string.not.empty))
 })

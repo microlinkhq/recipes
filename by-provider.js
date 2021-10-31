@@ -1,4 +1,5 @@
 module.exports = {
+  balenciaga: require('./recipes/by-provider/balenciaga'),
   betalist: require('./recipes/by-provider/betalist'),
   canopy: require('./recipes/by-provider/canopy'),
   codepen: require('./recipes/by-provider/codepen'),
