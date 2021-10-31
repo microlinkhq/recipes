@@ -25,7 +25,8 @@ const {
   telegram,
   twitter,
   wipoid,
-  youtube
+  youtube,
+  zalando
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -205,4 +206,11 @@ test('assc', async t => {
 test('ripndip', async t => {
   const { data } = await ripndip(ripndip.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.price, ow.string.not.empty))
+})
+
+test('zalando', async t => {
+  const { data } = await zalando(zalando.meta.examples[0], { apiKey })
+  console.log(data)
+  t.true(ow.isValid(data.price, ow.string.not.empty))
+  t.true(ow.isValid(data.color, ow.string.not.empty))
 })
