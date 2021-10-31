@@ -32,9 +32,12 @@ module.exports = async (url, opts) => {
     ...opts
   })
 
-  result.data.results = result.data.results.filter(
-    ({ title, description }) => !!title && !!description
-  )
+  if (result.data.results) {
+    result.data.results = result.data.results.filter(
+      ({ title, description }) => !!title && !!description
+    )
+  }
+
   return result
 }
 
