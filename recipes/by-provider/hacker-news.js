@@ -10,12 +10,12 @@ module.exports = opts =>
         attr: {
           title: {
             type: 'title',
-            selector: '.storylink',
+            selector: '.titlelink',
             attr: 'text'
           },
           url: {
             type: 'url',
-            selector: '.storylink',
+            selector: '.titlelink',
             attr: 'href'
           }
         }
