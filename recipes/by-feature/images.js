@@ -20,6 +20,6 @@ module.exports = async (url, opts) => {
 
 module.exports.meta = {
   name: 'Get Images',
-  description: 'Detect all the images of the target URL',
+  description: 'Retrieve all the images of the target URL',
   examples: ['https://microlink.io']
 }

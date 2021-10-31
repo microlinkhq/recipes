@@ -5,23 +5,23 @@ const { default: ow } = require('ow')
 
 const {
   debugCss,
-  fullyScreenshot,
-  getFavicon,
-  getHtml,
-  getExcerpt,
-  getEmails,
-  getImages,
+  emails,
+  embed,
+  excerpt,
+  favicon,
+  fullScreenshot,
+  html,
+  images,
   jsonLd,
   lighthouse,
-  technologyStack,
-  universalEmbed
+  technologyStack
 } = require('../by-feature')
 
 const apiKey = process.env.MICROLINK_API_KEY
 
-for (const url of universalEmbed.meta.examples) {
+for (const url of embed.meta.examples) {
   test(`universal embed for ${url}`, async t => {
-    const iframe = await universalEmbed(url, { apiKey })
+    const iframe = await embed(url, { apiKey })
     t.true(ow.isValid(iframe, ow.object.not.empty))
     t.true(ow.isValid(iframe.html, ow.string.not.empty))
     t.true(iframe.html.includes('width="350"'), url)
@@ -43,31 +43,31 @@ test('lighthouse', async t => {
 })
 
 test('get html', async t => {
-  const html = await getHtml(getHtml.meta.examples[0], { apiKey })
-  t.true(html.startsWith('<!DOCTYPE'))
+  const renderedHtml = await html(html.meta.examples[0], { apiKey })
+  t.true(renderedHtml.startsWith('<!DOCTYPE'))
 })
 
 test('get excerpt', async t => {
-  const { value: excerpt } = await getExcerpt(getExcerpt.meta.examples[0], {
+  const { value } = await excerpt(excerpt.meta.examples[0], {
     apiKey
   })
-  t.true(ow.isValid(excerpt, ow.string.not.empty))
+  t.true(ow.isValid(value, ow.string.not.empty))
 })
 
 test('get emails', async t => {
-  const emails = await getEmails(getEmails.meta.examples[0], { apiKey })
-  t.true(ow.isValid(emails, ow.array.not.empty))
+  const allEmails = await emails(emails.meta.examples[0], { apiKey })
+  t.true(ow.isValid(allEmails, ow.array.not.empty))
 })
 
 test('get favicon', async t => {
-  const faviconUrl = await getFavicon(getFavicon.meta.examples[0], { apiKey })
+  const faviconUrl = await favicon(favicon.meta.examples[0], { apiKey })
   t.true(!!faviconUrl)
 })
 
 test('get images', async t => {
-  const images = await getImages(getImages.meta.examples[0], { apiKey })
+  const allImages = await images(images.meta.examples[0], { apiKey })
 
-  images.forEach(image => {
+  allImages.forEach(image => {
     t.true(ow.isValid(image.url, ow.string.not.empty))
     t.true(ow.isValid(image.type, ow.string.not.empty))
     t.true(ow.isValid(image.size, ow.number.finite))
@@ -75,11 +75,11 @@ test('get images', async t => {
   })
 })
 
-test('fully screenshot', async t => {
-  const screenshot = await fullyScreenshot(fullyScreenshot.meta.examples[0], {
+test('full screenshot', async t => {
+  const image = await fullScreenshot(fullScreenshot.meta.examples[0], {
     apiKey
   })
-  t.true(ow.isValid(screenshot, ow.object.not.empty))
+  t.true(ow.isValid(image, ow.object.not.empty))
 })
 
 test('debug css', async t => {
