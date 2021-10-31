@@ -14,5 +14,6 @@ module.exports = {
   reddit: require('./recipes/by-provider/reddit'),
   telegram: require('./recipes/by-provider/telegram'),
   twitter: require('./recipes/by-provider/twitter'),
-  wipoid: require('./recipes/by-provider/wipoid')
+  wipoid: require('./recipes/by-provider/wipoid'),
+  youtube: require('./recipes/by-provider/youtube')
 }

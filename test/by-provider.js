@@ -19,7 +19,8 @@ const {
   reddit,
   telegram,
   twitter,
-  wipoid
+  wipoid,
+  youtube
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -165,4 +166,11 @@ test('reddit', async t => {
   t.true(ow.isValid(data.karma, ow.number.finite))
   t.true(ow.isValid(data.birthday, ow.string.not.empty))
   t.true(ow.isValid(data.avatar, ow.object.not.empty))
+})
+
+test('youtube', async t => {
+  const { data } = await youtube(youtube.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.views, ow.number.finite))
+  t.true(ow.isValid(data.video, ow.object.not.empty))
+  t.true(ow.isValid(data.audio, ow.object.not.empty))
 })
