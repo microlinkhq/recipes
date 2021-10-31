@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/microlinkhq/recipes/compare/v1.2.3...v1.2.4) (2021-10-31)
+
+
+### Bug Fixes
+
+* add if statement ([8d89b6c](https://github.com/microlinkhq/recipes/commit/8d89b6c449e6ec04adf58744231f9577dcdafa20))
+* update coolmod example url ([5c7a5e6](https://github.com/microlinkhq/recipes/commit/5c7a5e60d43cea925dcf7004d9b8971ecee6789f))
+
 ### [1.2.3](https://github.com/microlinkhq/recipes/compare/v1.2.2...v1.2.3) (2021-10-30)
 
 ### [1.2.2](https://github.com/microlinkhq/recipes/compare/v1.2.1...v1.2.2) (2021-10-30)
