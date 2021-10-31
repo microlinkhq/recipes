@@ -19,6 +19,7 @@ const {
   meetup,
   produchunt,
   reddit,
+  ripndip,
   soundcloud,
   spotify,
   telegram,
@@ -198,5 +199,10 @@ test('balenciaga', async t => {
 
 test('assc', async t => {
   const { data } = await assc(assc.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.price, ow.string.not.empty))
+})
+
+test('ripndip', async t => {
+  const { data } = await ripndip(ripndip.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.price, ow.string.not.empty))
 })

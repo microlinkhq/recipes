@@ -14,6 +14,7 @@ module.exports = {
   meetup: require('./recipes/by-provider/meetup'),
   produchunt: require('./recipes/by-provider/produchunt'),
   reddit: require('./recipes/by-provider/reddit'),
+  ripndip: require('./recipes/by-provider/ripndip'),
   soundcloud: require('./recipes/by-provider/soundcloud'),
   spotify: require('./recipes/by-provider/spotify'),
   telegram: require('./recipes/by-provider/telegram'),
