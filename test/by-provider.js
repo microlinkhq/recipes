@@ -17,6 +17,7 @@ const {
   meetup,
   produchunt,
   reddit,
+  soundcloud,
   telegram,
   twitter,
   wipoid,
@@ -172,5 +173,14 @@ test('youtube', async t => {
   const { data } = await youtube(youtube.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.views, ow.number.finite))
   t.true(ow.isValid(data.video, ow.object.not.empty))
+  t.true(ow.isValid(data.audio, ow.object.not.empty))
+})
+
+test('soundcloud', async t => {
+  const { data } = await soundcloud(soundcloud.meta.examples[0], {
+    endpoint: 'http://localhost:3000'
+  })
+  console.log(data)
+  t.true(ow.isValid(data.views, ow.number.finite))
   t.true(ow.isValid(data.audio, ow.object.not.empty))
 })

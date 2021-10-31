@@ -12,6 +12,7 @@ module.exports = {
   meetup: require('./recipes/by-provider/meetup'),
   produchunt: require('./recipes/by-provider/produchunt'),
   reddit: require('./recipes/by-provider/reddit'),
+  soundcloud: require('./recipes/by-provider/soundcloud'),
   telegram: require('./recipes/by-provider/telegram'),
   twitter: require('./recipes/by-provider/twitter'),
   wipoid: require('./recipes/by-provider/wipoid'),
