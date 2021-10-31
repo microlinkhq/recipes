@@ -21,7 +21,8 @@ const {
   telegram,
   twitter,
   wipoid,
-  youtube
+  youtube,
+  spotify
 } = require('../by-provider')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -177,10 +178,12 @@ test('youtube', async t => {
 })
 
 test('soundcloud', async t => {
-  const { data } = await soundcloud(soundcloud.meta.examples[0], {
-    endpoint: 'http://localhost:3000'
-  })
-  console.log(data)
+  const { data } = await soundcloud(soundcloud.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.views, ow.number.finite))
+  t.true(ow.isValid(data.audio, ow.object.not.empty))
+})
+
+test('spotify', async t => {
+  const { data } = await spotify(spotify.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.audio, ow.object.not.empty))
 })

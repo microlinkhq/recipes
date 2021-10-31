@@ -13,6 +13,7 @@ module.exports = {
   produchunt: require('./recipes/by-provider/produchunt'),
   reddit: require('./recipes/by-provider/reddit'),
   soundcloud: require('./recipes/by-provider/soundcloud'),
+  spotify: require('./recipes/by-provider/spotify'),
   telegram: require('./recipes/by-provider/telegram'),
   twitter: require('./recipes/by-provider/twitter'),
   wipoid: require('./recipes/by-provider/wipoid'),
