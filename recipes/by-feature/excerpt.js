@@ -19,7 +19,7 @@ const code = `async ({ query, page }) => {
 module.exports = microlink(code)
 module.exports.code = code
 module.exports.meta = {
-  name: 'Get Excerpt',
-  description: 'Short extract resume for any website',
+  name: 'Excerpt',
+  description: 'Get the article description, or short excerpt from the content',
   examples: ['https://fithero.app']
 }

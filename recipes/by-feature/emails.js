@@ -18,7 +18,7 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Get emails',
-  description: 'Detect all email addresses present in a website',
+  name: 'Emails',
+  description: 'Find any email inside a website',
   examples: ['https://www.raycast.com']
 }

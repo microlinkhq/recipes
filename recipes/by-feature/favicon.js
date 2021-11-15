@@ -26,7 +26,7 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Get Favicon',
-  description: 'Retrieve the favicon for any website',
+  name: 'Favicon',
+  description: 'Get the favicon for any web',
   examples: ['https://microlink.io']
 }

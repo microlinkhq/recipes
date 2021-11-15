@@ -17,7 +17,7 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Get JSON+LD',
+  name: 'JSON+LD',
   description: 'Retrieve all JSON+LD elements present on the website',
   examples: ['https://microlink.io']
 }
