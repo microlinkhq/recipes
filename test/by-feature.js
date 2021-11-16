@@ -10,6 +10,7 @@ const {
   excerpt,
   favicon,
   fullScreenshot,
+  healthcheck,
   html,
   images,
   jsonLd,
@@ -90,4 +91,12 @@ test('debug css', async t => {
 test('retrieve JSON+lD', async t => {
   const data = await jsonLd(jsonLd.meta.examples[0], { apiKey })
   t.true(ow.isValid(data, ow.array.not.empty))
+})
+
+test('healthcheck', async t => {
+  const { value } = await healthcheck(healthcheck.meta.examples[0], { apiKey })
+  t.true(ow.isValid(value.url, ow.string.not.empty))
+  t.true(ow.isValid(value.statusCode, ow.number.finite))
+  t.true(ow.isValid(value.headers, ow.object.not.empty))
+  t.true(ow.isValid(value.html, ow.string.not.empty))
 })
