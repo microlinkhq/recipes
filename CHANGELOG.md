@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.5](https://github.com/microlinkhq/recipes/compare/v1.2.4...v1.2.5) (2021-11-16)
+
+
+### Bug Fixes
+
+* get html from function parameters ([9f1f4ea](https://github.com/microlinkhq/recipes/commit/9f1f4ea68487cf5cea23d8b2ca0c51e17e1cff03))
+
 ### [1.2.4](https://github.com/microlinkhq/recipes/compare/v1.2.3...v1.2.4) (2021-10-31)
 
 
