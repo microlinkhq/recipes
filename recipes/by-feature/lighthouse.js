@@ -25,7 +25,7 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Lighthouse Report',
+  name: 'Lighthouse',
   logo: 'https://cdn.microlink.io/logos/lighthouse.png',
   description: 'Run Lighthouse on demand',
   examples: ['https://example.com']
