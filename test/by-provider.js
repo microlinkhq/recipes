@@ -9,7 +9,6 @@ const {
   betalist,
   canopy,
   codepen,
-  coolmod,
   fca,
   github,
   google,
@@ -100,13 +99,6 @@ test('github', async t => {
   t.true(ow.isValid(data.stats.followers, ow.number.finite))
   t.true(ow.isValid(data.stats.following, ow.number.finite))
   t.true(ow.isValid(data.stats.stars, ow.number.finite))
-})
-
-test('coolmod', async t => {
-  const { data } = await coolmod(coolmod.meta.examples[0], { apiKey })
-
-  t.true(ow.isValid(data.price, ow.string.not.empty))
-  t.true(ow.isValid(data.image, ow.object.not.empty))
 })
 
 test('google', async t => {
