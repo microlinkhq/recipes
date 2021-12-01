@@ -15,5 +15,5 @@ module.exports = async (url, opts) => {
 module.exports.meta = {
   name: 'PDF',
   description: 'Generate a PDF over the target URL',
-  examples: ['rauchg.com/2014/7-principles-of-rich-web-applications']
+  examples: ['https://rauchg.com/2014/7-principles-of-rich-web-applications']
 }
