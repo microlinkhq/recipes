@@ -10,6 +10,7 @@ module.exports = {
   images: require('./recipes/by-feature/images'),
   jsonLd: require('./recipes/by-feature/json-ld'),
   lighthouse: require('./recipes/by-feature/lighthouse'),
+  pdf: require('./recipes/by-feature/pdf'),
   screenshot: require('./recipes/by-feature/screenshot'),
   technologyStack: require('./recipes/by-feature/technology-stack')
 }

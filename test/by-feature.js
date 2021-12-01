@@ -15,6 +15,7 @@ const {
   images,
   jsonLd,
   lighthouse,
+  pdf,
   screenshot,
   technologyStack
 } = require('../by-feature')
@@ -75,6 +76,13 @@ test('get images', async t => {
     t.true(ow.isValid(image.size, ow.number.finite))
     t.true(ow.isValid(image.size_pretty, ow.string.not.empty))
   })
+})
+
+test('pdf', async t => {
+  const asset = await pdf(pdf.meta.examples[0], {
+    apiKey
+  })
+  t.true(ow.isValid(asset, ow.object.not.empty))
 })
 
 test('screenshot', async t => {
