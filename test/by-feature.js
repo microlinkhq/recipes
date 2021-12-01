@@ -15,6 +15,7 @@ const {
   images,
   jsonLd,
   lighthouse,
+  screenshot,
   technologyStack
 } = require('../by-feature')
 
@@ -74,6 +75,13 @@ test('get images', async t => {
     t.true(ow.isValid(image.size, ow.number.finite))
     t.true(ow.isValid(image.size_pretty, ow.string.not.empty))
   })
+})
+
+test('screenshot', async t => {
+  const image = await screenshot(screenshot.meta.examples[0], {
+    apiKey
+  })
+  t.true(ow.isValid(image, ow.object.not.empty))
 })
 
 test('full screenshot', async t => {
