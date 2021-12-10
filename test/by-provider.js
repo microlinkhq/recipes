@@ -4,6 +4,7 @@ const { default: ow } = require('ow')
 const test = require('ava')
 
 const {
+  amazon,
   assc,
   balenciaga,
   betalist,
@@ -202,7 +203,12 @@ test('ripndip', async t => {
 
 test('zalando', async t => {
   const { data } = await zalando(zalando.meta.examples[0], { apiKey })
-  console.log(data)
   t.true(ow.isValid(data.price, ow.string.not.empty))
   t.true(ow.isValid(data.color, ow.string.not.empty))
+})
+
+test('amazon', async t => {
+  const { data } = await amazon(amazon.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.price, ow.number.finite))
+  t.true(ow.isValid(data.currency, ow.string.not.empty))
 })
