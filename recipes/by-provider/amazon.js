@@ -8,17 +8,17 @@ module.exports = (url, opts) =>
       price: {
         selector: '#attach-base-product-price',
         attr: 'val',
-        type: 'number',
+        type: 'number'
       },
       currency: {
         selector: '#attach-base-product-currency-symbol',
-        attr: 'val',
-      },
+        attr: 'val'
+      }
     },
     ...opts
   })
 
 module.exports.meta = {
   name: 'Amazon',
-  examples: ['https://www.amazon.com/dp/B09JQML3NL/']
+  examples: ['https://www.amazon.com/dp/B09JQML3NL']
 }
