@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/microlinkhq/recipes/compare/v1.2.8...v1.3.0) (2021-12-12)
+
+
+### Features
+
+* add amazon recipe ([27cb618](https://github.com/microlinkhq/recipes/commit/27cb6184c92b6037169db6cc6f205ca9ceb15dc3))
+
+
+### Bug Fixes
+
+* linter for amazon recipe ([db6b055](https://github.com/microlinkhq/recipes/commit/db6b055238eaf23201ce9341da8ec90a9756f099))
+
 ### [1.2.8](https://github.com/microlinkhq/recipes/compare/v1.2.7...v1.2.8) (2021-12-01)
 
 
