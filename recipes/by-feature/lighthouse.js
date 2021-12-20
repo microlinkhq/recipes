@@ -5,18 +5,11 @@ const mql = require('@microlink/mql')
 module.exports = async (url, opts) => {
   const { data } = await mql(url, {
     meta: false,
+    technologies: false,
     insights: {
       lighthouse: {
-        device: 'mobile',
-        onlyCategories: [
-          'performance',
-          'best-practices',
-          'accessibility',
-          'seo',
-          'pwa'
-        ]
-      },
-      technologies: false
+        preset: 'lr-mobile'
+      }
     },
     ...opts
   })
