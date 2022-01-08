@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/microlinkhq/recipes/compare/v1.3.1...v1.3.2) (2022-01-08)
+
+
+### Bug Fixes
+
+* wait twitter data fetch ([a2e6cf7](https://github.com/microlinkhq/recipes/commit/a2e6cf73520e78036258cb84868478fafeac05ff))
+
 ### [1.3.1](https://github.com/microlinkhq/recipes/compare/v1.3.0...v1.3.1) (2021-12-20)
 
 ## [1.3.0](https://github.com/microlinkhq/recipes/compare/v1.2.8...v1.3.0) (2021-12-12)
