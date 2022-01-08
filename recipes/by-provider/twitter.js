@@ -34,7 +34,7 @@ module.exports = async (url, opts) => {
       }
     },
     prerender: true,
-    waitForSelector: 'div[lang]',
+    waitForTimeout: 700,
     scroll: 'div[lang]:last-child',
     ...opts
   })
