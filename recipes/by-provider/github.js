@@ -6,18 +6,18 @@ module.exports = (url, opts) =>
   mql(url, {
     data: {
       stats: {
-        selector: '.js-profile-editable-area',
+        selector: '.application-main',
         attr: {
           followers: {
-            selector: 'a[href*="tab=followers"] span',
+            selector: '.js-profile-editable-area a[href*="tab=followers"] span',
             type: 'number'
           },
           following: {
-            selector: 'a[href*="tab=following"] span',
+            selector: '.js-profile-editable-area a[href*="tab=following"] span',
             type: 'number'
           },
           stars: {
-            selector: 'a[href*="tab=stars"] span',
+            selector: '.js-responsive-underlinenav a[data-tab-item="stars"] span',
             type: 'number'
           }
         }
