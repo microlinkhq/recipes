@@ -6,7 +6,7 @@ module.exports = async (url, opts) => {
   const result = await mql(url, {
     data: {
       banner: {
-        selector: 'main div:nth-child(2) img',
+        selector: 'main a[href$="header_photo"] img',
         attr: 'src',
         type: 'image'
       },
