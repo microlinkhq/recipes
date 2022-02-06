@@ -5,18 +5,10 @@ const mql = require('@microlink/mql')
 module.exports = async (url, opts) => {
   const result = await mql(url, {
     data: {
-      latestTweets: {
-        selectorAll: 'main article',
-        attr: {
-          content: {
-            selector: 'div[lang]',
-            attr: 'text'
-          },
-          link: {
-            selector: 'a',
-            attr: 'href'
-          }
-        }
+      banner: {
+        selector: 'main div:nth-child(2) img',
+        attr: 'src',
+        type: 'image'
       },
       stats: {
         selector: 'main',
@@ -31,11 +23,23 @@ module.exports = async (url, opts) => {
             selector: 'a[href*="followers"] span span'
           }
         }
+      },
+      latestTweets: {
+        selectorAll: 'main article',
+        attr: {
+          content: {
+            selector: 'div[lang]',
+            attr: 'text'
+          },
+          link: {
+            selector: 'a',
+            attr: 'href'
+          }
+        }
       }
     },
     prerender: true,
-    waitForTimeout: 700,
-    scroll: 'div[lang]:last-child',
+    waitForTimeout: 1000,
     ...opts
   })
 
