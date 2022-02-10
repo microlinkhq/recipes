@@ -20,5 +20,5 @@ module.exports = (url, opts) =>
 
 module.exports.meta = {
   name: 'Amazon',
-  examples: ['https://www.amazon.com/Images-SI-Uranium-Ore/dp/B000796XXM']
+  examples: ['https://www.amazon.com/dp/B08FC6C75Y']
 }

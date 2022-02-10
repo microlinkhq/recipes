@@ -6,7 +6,7 @@ module.exports = (url, opts) =>
   mql(url, {
     data: {
       name: {
-        selector: 'h1 a',
+        selector: 'h1',
         attr: 'text',
         type: 'string'
       },

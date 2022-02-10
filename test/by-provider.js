@@ -132,7 +132,9 @@ test('fca', async t => {
   t.true(ow.isValid(data.updatedAt, ow.string.not.empty))
   t.true(ow.isValid(data.address, ow.string.not.empty))
   t.true(ow.isValid(data.firmReferenceNumber, ow.number.finite))
+  t.true(ow.isValid(data.firmReferenceNumber.toString(), ow.string.minLength(6)))
   t.true(ow.isValid(data.registeredCompanyNumber, ow.number.finite))
+  t.true(ow.isValid(data.registeredCompanyNumber.toString(), ow.string.minLength(6)))
   t.true(ow.isValid(data.email, ow.string.not.empty))
   t.true(ow.isValid(data.phone, ow.string.not.empty))
 })
@@ -176,7 +178,7 @@ test('youtube', async t => {
 
 test('soundcloud', async t => {
   const { data } = await soundcloud(soundcloud.meta.examples[0], { apiKey })
-  t.true(ow.isValid(data.views, ow.number.finite))
+  t.true(ow.isValid(data.plays, ow.number.finite))
   t.true(ow.isValid(data.audio, ow.object.not.empty))
 })
 

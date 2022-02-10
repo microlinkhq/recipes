@@ -35,7 +35,6 @@ module.exports = (url, opts) =>
         }
       }
     },
-    click: '.LoadMoreButton',
     ...opts
   })
 

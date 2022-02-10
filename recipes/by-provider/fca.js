@@ -24,7 +24,7 @@ module.exports = async (url, opts) => {
       firmReferenceNumber: {
         type: 'number',
         selector:
-          '#who-is-this-details-content > div.stack.stack--direct.stack--medium > div.slds-grid.slds-wrap.gutters-large.gutters-medium_none > div:nth-child(2) > div > div > div:nth-child(2) > p'
+          '#who-is-this-details-content > div.stack.stack--direct.stack--medium > div.slds-grid.slds-wrap.gutters-large.gutters-medium_none > div:nth-child(3) > div > div > div:nth-child(1) > p'
       },
       registeredCompanyNumber: {
         selector: '.hide-href-print'
@@ -41,7 +41,7 @@ module.exports = async (url, opts) => {
       website: {
         type: 'url',
         selector:
-          '#who-is-this-details-content > div.stack.stack--direct.stack--medium > div.slds-grid.slds-wrap.gutters-large.gutters-medium_none > div.slds-col.slds-size_1-of-1.slds-medium-size_6-of-12.slds-p-around_none.slds-p-right_small > div > div > div:nth-child(4) > a'
+          '#who-is-this-details-content > div.stack.stack--direct.stack--medium > div.slds-grid.slds-wrap.gutters-large.gutters-medium_none > div.slds-col.slds-size_1-of-1.slds-medium-size_6-of-12.slds-p-around_none.slds-p-right_small > div > div > div:nth-child(3) > a > span:nth-child(1)'
       }
     },
     ...opts
@@ -54,7 +54,7 @@ module.exports = async (url, opts) => {
   }
 
   if (result.data.updatedAt) {
-    result.data.updatedAt = result.data.updatedAt.split(':')[1].trim()
+    result.data.updatedAt = result.data.updatedAt.split('firm details')[1].trim()
   }
 
   return result
