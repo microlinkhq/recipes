@@ -39,7 +39,7 @@ module.exports = async (url, opts) => {
       }
     },
     prerender: true,
-    waitForTimeout: 1000,
+    waitForSelector: 'main article',
     ...opts
   })
 

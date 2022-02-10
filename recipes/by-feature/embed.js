@@ -14,7 +14,7 @@ module.exports = async (url, opts) => {
 }
 
 module.exports.meta = {
-  name: 'Universal embed',
+  name: 'Universal Embed',
   description: 'Display embedded content, in a unified way',
   examples: [
     demoLinks.YouTube.url,
