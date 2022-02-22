@@ -23,6 +23,7 @@ const {
   soundcloud,
   spotify,
   telegram,
+  tiktok,
   twitter,
   wipoid,
   youtube,
@@ -213,4 +214,12 @@ test('amazon', async t => {
   const { data } = await amazon(amazon.meta.examples[0], { apiKey })
   t.true(ow.isValid(data.price, ow.number.finite))
   t.true(ow.isValid(data.currency, ow.string.not.empty))
+})
+
+test('tiktok', async t => {
+  const { data } = await tiktok(tiktok.meta.examples[0], { apiKey })
+  t.true(ow.isValid(data.song, ow.string.not.empty))
+  t.true(ow.isValid(data.likeCount, ow.string.not.empty))
+  t.true(ow.isValid(data.commentCount, ow.string.not.empty))
+  t.true(ow.isValid(data.shareCount, ow.string.not.empty))
 })

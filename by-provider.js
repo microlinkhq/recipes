@@ -18,6 +18,7 @@ module.exports = {
   soundcloud: require('./recipes/by-provider/soundcloud'),
   spotify: require('./recipes/by-provider/spotify'),
   telegram: require('./recipes/by-provider/telegram'),
+  tiktok: require('./recipes/by-provider/tiktok'),
   twitter: require('./recipes/by-provider/twitter'),
   wipoid: require('./recipes/by-provider/wipoid'),
   youtube: require('./recipes/by-provider/youtube'),
