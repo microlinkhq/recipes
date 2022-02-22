@@ -2,12 +2,12 @@
 
 const microlink = require('@microlink/function')
 
-const code = `async ({ query, html }) => {
+const code = `async ({ url, html }) => {
   const { Readability } = require('@mozilla/readability')
   const { JSDOM, VirtualConsole } = require('jsdom')
 
   const dom = new JSDOM(html, {
-    url: query.url,
+    url,
     virtualConsole: new VirtualConsole()
   })
 

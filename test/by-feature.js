@@ -51,9 +51,7 @@ test('get html', async t => {
 })
 
 test('get excerpt', async t => {
-  const { value } = await excerpt(excerpt.meta.examples[0], {
-    apiKey
-  })
+  const { value } = await excerpt(excerpt.meta.examples[0], { apiKey })
   t.true(ow.isValid(value, ow.string.not.empty))
 })
 
