@@ -12,6 +12,7 @@ module.exports = {
   imdb: require('./recipes/by-provider/imdb'),
   instagram: require('./recipes/by-provider/instagram'),
   meetup: require('./recipes/by-provider/meetup'),
+  parcel: require('./recipes/by-provider/parcel'),
   produchunt: require('./recipes/by-provider/produchunt'),
   reddit: require('./recipes/by-provider/reddit'),
   ripndip: require('./recipes/by-provider/ripndip'),

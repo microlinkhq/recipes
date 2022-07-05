@@ -17,6 +17,7 @@ const {
   imdb,
   instagram,
   meetup,
+  parcel,
   produchunt,
   reddit,
   ripndip,
@@ -133,9 +134,13 @@ test('fca', async t => {
   t.true(ow.isValid(data.updatedAt, ow.string.not.empty))
   t.true(ow.isValid(data.address, ow.string.not.empty))
   t.true(ow.isValid(data.firmReferenceNumber, ow.number.finite))
-  t.true(ow.isValid(data.firmReferenceNumber.toString(), ow.string.minLength(6)))
+  t.true(
+    ow.isValid(data.firmReferenceNumber.toString(), ow.string.minLength(6))
+  )
   t.true(ow.isValid(data.registeredCompanyNumber, ow.number.finite))
-  t.true(ow.isValid(data.registeredCompanyNumber.toString(), ow.string.minLength(6)))
+  t.true(
+    ow.isValid(data.registeredCompanyNumber.toString(), ow.string.minLength(6))
+  )
   t.true(ow.isValid(data.email, ow.string.not.empty))
   t.true(ow.isValid(data.phone, ow.string.not.empty))
 })
@@ -222,4 +227,9 @@ test('tiktok', async t => {
   t.true(ow.isValid(data.likeCount, ow.string.not.empty))
   t.true(ow.isValid(data.commentCount, ow.string.not.empty))
   t.true(ow.isValid(data.shareCount, ow.string.not.empty))
+})
+
+test('parcel', async t => {
+  const screenshotUrl = await parcel(parcel.meta.examples[0], { apiKey })
+  t.true(ow.isValid(screenshotUrl, ow.string.not.empty))
 })
