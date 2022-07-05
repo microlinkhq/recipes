@@ -18,7 +18,7 @@ const {
   instagram,
   meetup,
   parcel,
-  produchunt,
+  producthunt,
   reddit,
   ripndip,
   soundcloud,
@@ -57,8 +57,8 @@ test('twitter', async t => {
   t.true(ow.isValid(data.stats.tweets, ow.number.finite))
 })
 
-test('produchunt', async t => {
-  const { data } = await produchunt(produchunt.meta.examples[0], { apiKey })
+test('producthunt', async t => {
+  const { data } = await producthunt(producthunt.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.name, ow.string.not.empty))
   t.true(ow.isValid(data.upvotes, ow.string.not.empty))
@@ -126,8 +126,10 @@ test('imdb', async t => {
   t.true(ow.isValid(data.ratingCount, ow.string.not.empty))
 })
 
-test('fca', async t => {
-  const { data } = await fca(fca.meta.examples[0], { apiKey })
+test.only('fca', async t => {
+  const { data } = await fca(fca.meta.examples[0], {
+    endpoint: 'http://localhost:3000'
+  })
 
   t.true(ow.isValid(data.url, ow.string.not.empty))
   t.true(ow.isValid(data.name, ow.string.not.empty))
