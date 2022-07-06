@@ -46,7 +46,7 @@
     "git-authors-cli": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "ow": "latest",
+    "ow": "0.28.1",
     "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",

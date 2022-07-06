@@ -17,7 +17,8 @@ const {
   imdb,
   instagram,
   meetup,
-  produchunt,
+  parcel,
+  producthunt,
   reddit,
   ripndip,
   soundcloud,
@@ -56,8 +57,8 @@ test('twitter', async t => {
   t.true(ow.isValid(data.stats.tweets, ow.number.finite))
 })
 
-test('produchunt', async t => {
-  const { data } = await produchunt(produchunt.meta.examples[0], { apiKey })
+test('producthunt', async t => {
+  const { data } = await producthunt(producthunt.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.name, ow.string.not.empty))
   t.true(ow.isValid(data.upvotes, ow.string.not.empty))
@@ -125,17 +126,23 @@ test('imdb', async t => {
   t.true(ow.isValid(data.ratingCount, ow.string.not.empty))
 })
 
-test('fca', async t => {
-  const { data } = await fca(fca.meta.examples[0], { apiKey })
+test.only('fca', async t => {
+  const { data } = await fca(fca.meta.examples[0], {
+    endpoint: 'http://localhost:3000'
+  })
 
   t.true(ow.isValid(data.url, ow.string.not.empty))
   t.true(ow.isValid(data.name, ow.string.not.empty))
   t.true(ow.isValid(data.updatedAt, ow.string.not.empty))
   t.true(ow.isValid(data.address, ow.string.not.empty))
   t.true(ow.isValid(data.firmReferenceNumber, ow.number.finite))
-  t.true(ow.isValid(data.firmReferenceNumber.toString(), ow.string.minLength(6)))
+  t.true(
+    ow.isValid(data.firmReferenceNumber.toString(), ow.string.minLength(6))
+  )
   t.true(ow.isValid(data.registeredCompanyNumber, ow.number.finite))
-  t.true(ow.isValid(data.registeredCompanyNumber.toString(), ow.string.minLength(6)))
+  t.true(
+    ow.isValid(data.registeredCompanyNumber.toString(), ow.string.minLength(6))
+  )
   t.true(ow.isValid(data.email, ow.string.not.empty))
   t.true(ow.isValid(data.phone, ow.string.not.empty))
 })
@@ -222,4 +229,9 @@ test('tiktok', async t => {
   t.true(ow.isValid(data.likeCount, ow.string.not.empty))
   t.true(ow.isValid(data.commentCount, ow.string.not.empty))
   t.true(ow.isValid(data.shareCount, ow.string.not.empty))
+})
+
+test('parcel', async t => {
+  const screenshotUrl = await parcel(parcel.meta.examples[0], { apiKey })
+  t.true(ow.isValid(screenshotUrl, ow.string.not.empty))
 })

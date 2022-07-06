@@ -6,7 +6,7 @@ module.exports = (url, opts) =>
   mql(url, {
     data: {
       song: {
-        selector: 'h4[data-e2e="video-music"]',
+        selector: 'h4[data-e2e="browse-music"]',
         attr: 'text',
         type: 'string'
       },

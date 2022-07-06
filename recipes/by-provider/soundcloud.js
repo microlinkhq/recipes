@@ -8,7 +8,7 @@ module.exports = async (url, opts) => {
     audio: true,
     data: {
       plays: {
-        selector: '.soundStats .sc-visuallyhidden',
+        selector: '.sc-ministats-plays .sc-visuallyhidden',
         type: 'number'
       }
     },

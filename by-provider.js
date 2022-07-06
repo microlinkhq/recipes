@@ -12,7 +12,8 @@ module.exports = {
   imdb: require('./recipes/by-provider/imdb'),
   instagram: require('./recipes/by-provider/instagram'),
   meetup: require('./recipes/by-provider/meetup'),
-  produchunt: require('./recipes/by-provider/produchunt'),
+  parcel: require('./recipes/by-provider/parcel'),
+  producthunt: require('./recipes/by-provider/producthunt'),
   reddit: require('./recipes/by-provider/reddit'),
   ripndip: require('./recipes/by-provider/ripndip'),
   soundcloud: require('./recipes/by-provider/soundcloud'),
@@ -21,6 +22,6 @@ module.exports = {
   tiktok: require('./recipes/by-provider/tiktok'),
   twitter: require('./recipes/by-provider/twitter'),
   wipoid: require('./recipes/by-provider/wipoid'),
-  youtube: require('./recipes/by-provider/youtube'),
-  zalando: require('./recipes/by-provider/zalando')
+  zalando: require('./recipes/by-provider/zalando'),
+  youtube: require('./recipes/by-provider/youtube')
 }
