@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/microlinkhq/recipes/compare/v1.4.0...v1.5.0) (2022-07-06)
+
+
+### Features
+
+* **provider:** add parcel ([4bcd866](https://github.com/microlinkhq/recipes/commit/4bcd86611455c197955c7705862df940ac573a50))
+
 ## [1.4.0](https://github.com/microlinkhq/recipes/compare/v1.3.6...v1.4.0) (2022-02-22)
 
 
