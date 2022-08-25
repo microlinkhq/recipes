@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/microlinkhq/recipes/compare/v1.5.0...v1.6.0) (2022-08-25)
+
+
+### Features
+
+* add youtube-dl recipe ([9e45c5b](https://github.com/microlinkhq/recipes/commit/9e45c5bf2aa18bb11ffc6eb39b83ae440d1552cb))
+
 ## [1.5.0](https://github.com/microlinkhq/recipes/compare/v1.4.0...v1.5.0) (2022-07-06)
 
 
