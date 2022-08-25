@@ -12,5 +12,6 @@ module.exports = {
   lighthouse: require('./recipes/by-feature/lighthouse'),
   pdf: require('./recipes/by-feature/pdf'),
   screenshot: require('./recipes/by-feature/screenshot'),
-  technologyStack: require('./recipes/by-feature/technology-stack')
+  technologyStack: require('./recipes/by-feature/technology-stack'),
+  youtubeDl: require('./recipes/by-feature/youtube-dl')
 }

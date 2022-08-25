@@ -17,7 +17,8 @@ const {
   lighthouse,
   pdf,
   screenshot,
-  technologyStack
+  technologyStack,
+  youtubeDl
 } = require('../by-feature')
 
 const apiKey = process.env.MICROLINK_API_KEY
@@ -113,4 +114,9 @@ test('healthcheck', async t => {
   t.true(ow.isValid(value.statusCode, ow.number.finite))
   t.true(ow.isValid(value.headers, ow.object.not.empty))
   t.true(ow.isValid(value.html, ow.string.not.empty))
+})
+
+tes('youtube-dl', async t => {
+  const { value } = await youtubeDl(youtubeDl.meta.examples[0], { apiKey s})
+  t.true(ow.isValid(value, ow.object.not.empty))
 })
