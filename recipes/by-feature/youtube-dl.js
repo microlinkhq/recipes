@@ -17,6 +17,7 @@ module.exports = microlink(code)
 module.exports.code = code
 module.exports.meta = {
   name: 'youtube-dl',
-  description: 'CLI to download videos from YouTube.com and other video sites',
+  description:
+    'Get metadata for any video URL. Over 700 online video services supported.',
   examples: ['https://imrane.substack.com/p/la-guerre-de-troie-pour-ecrire-un']
 }
