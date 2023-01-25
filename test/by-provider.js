@@ -45,16 +45,26 @@ test('betalist', async t => {
 })
 
 test('twitter', async t => {
-  const { data } = await twitter(twitter.meta.examples[0], { apiKey })
+  {
+    const { data } = await twitter(twitter.meta.examples[1], { apiKey })
 
-  data.latestTweets.forEach(tweet => {
-    t.true(ow.isValid(tweet.content, ow.string.not.empty))
-    t.true(ow.isValid(tweet.link, ow.string.not.empty))
-  })
+    data.latestTweets.forEach(tweet => {
+      t.true(ow.isValid(tweet.content, ow.string.not.empty))
+      t.true(ow.isValid(tweet.link, ow.string.not.empty))
+    })
 
-  t.true(ow.isValid(data.stats.followers, ow.number.finite))
-  t.true(ow.isValid(data.stats.followings, ow.number.finite))
-  t.true(ow.isValid(data.stats.tweets, ow.number.finite))
+    t.true(ow.isValid(data.stats.followers, ow.number.finite))
+    t.true(ow.isValid(data.stats.followings, ow.number.finite))
+    t.true(ow.isValid(data.stats.tweets, ow.number.finite))
+  }
+  {
+    const { data } = await twitter(twitter.meta.examples[1], { apiKey })
+
+    t.true(ow.isValid(data.stats.retweets, ow.number.finite))
+    t.true(ow.isValid(data.stats.quoteRetweets, ow.number.finite))
+    t.true(ow.isValid(data.stats.likes, ow.number.finite))
+    t.true(ow.isValid(data.stats.tweetDate, ow.string.not.empty))
+  }
 })
 
 test('producthunt', async t => {
