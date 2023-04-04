@@ -5,6 +5,7 @@ module.exports = {
   excerpt: require('./recipes/by-feature/excerpt'),
   favicon: require('./recipes/by-feature/favicon'),
   fullScreenshot: require('./recipes/by-feature/full-screenshot'),
+  headings: require('./recipes/by-feature/headings'),
   healthcheck: require('./recipes/by-feature/healthcheck'),
   html: require('./recipes/by-feature/html'),
   images: require('./recipes/by-feature/images'),

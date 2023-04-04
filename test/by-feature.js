@@ -18,6 +18,7 @@ const {
   pdf,
   screenshot,
   technologyStack,
+  headings,
   youtubeDl
 } = require('../by-feature')
 
@@ -77,6 +78,18 @@ test('get images', async t => {
   })
 })
 
+test('get headings', async t => {
+  const { url, ...allHeaders } = await headings(headings.meta.examples[0], {
+    apiKey
+  })
+
+  Object.entries(allHeaders)
+    .filter(([, values]) => Array.isArray(values))
+    .forEach(([, values]) => {
+      t.true(ow.isValid(values, ow.array.not.empty))
+    })
+})
+
 test('pdf', async t => {
   const asset = await pdf(pdf.meta.examples[0], {
     apiKey
@@ -116,7 +129,7 @@ test('healthcheck', async t => {
   t.true(ow.isValid(value.html, ow.string.not.empty))
 })
 
-tes('youtube-dl', async t => {
-  const { value } = await youtubeDl(youtubeDl.meta.examples[0], { apiKey s})
+test('youtube-dl', async t => {
+  const { value } = await youtubeDl(youtubeDl.meta.examples[0], { apiKey })
   t.true(ow.isValid(value, ow.object.not.empty))
 })
