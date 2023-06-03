@@ -14,5 +14,6 @@ module.exports = {
   pdf: require('./recipes/by-feature/pdf'),
   screenshot: require('./recipes/by-feature/screenshot'),
   technologyStack: require('./recipes/by-feature/technology-stack'),
+  uris: require('./recipes/by-feature/uris'),
   youtubeDl: require('./recipes/by-feature/youtube-dl')
 }
