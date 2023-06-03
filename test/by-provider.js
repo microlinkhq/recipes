@@ -136,10 +136,8 @@ test('imdb', async t => {
   t.true(ow.isValid(data.ratingCount, ow.string.not.empty))
 })
 
-test.only('fca', async t => {
-  const { data } = await fca(fca.meta.examples[0], {
-    endpoint: 'http://localhost:3000'
-  })
+test('fca', async t => {
+  const { data } = await fca(fca.meta.examples[0], { apiKey })
 
   t.true(ow.isValid(data.url, ow.string.not.empty))
   t.true(ow.isValid(data.name, ow.string.not.empty))
