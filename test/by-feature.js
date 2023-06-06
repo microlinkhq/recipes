@@ -19,6 +19,7 @@ const {
   pdf,
   screenshot,
   technologyStack,
+  text,
   uris,
   youtubeDl
 } = require('../by-feature')
@@ -138,4 +139,9 @@ test('.youtubeDl', async t => {
 test('.uris', async t => {
   const { value } = await uris(uris.meta.examples[0], { apiKey })
   t.true(ow.isValid(value, ow.array.not.empty))
+})
+
+test('.text', async t => {
+  const { value } = await text(text.meta.examples[0], { apiKey })
+  t.true(ow.isValid(value, ow.string.not.empty))
 })
