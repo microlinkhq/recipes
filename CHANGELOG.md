@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/microlinkhq/recipes/compare/v1.7.0...v1.8.0) (2023-06-06)
+
+
+### Features
+
+* add text recipe ([#18](https://github.com/microlinkhq/recipes/issues/18)) ([9293f68](https://github.com/microlinkhq/recipes/commit/9293f68cba4f8001d5bfa4b8ac5aeb13e097ed42))
+
 ## [1.7.0](https://github.com/microlinkhq/recipes/compare/v1.6.2...v1.7.0) (2023-06-03)
 
 
