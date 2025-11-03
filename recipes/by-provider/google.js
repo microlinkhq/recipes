@@ -29,6 +29,7 @@ module.exports = async (url, opts) => {
         }
       }
     },
+    device:"iPad",
     ...opts
   })
 
