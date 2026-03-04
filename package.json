@@ -4,6 +4,7 @@
   "homepage": "https://microlink.io/recipes",
   "version": "1.8.1",
   "main": "index.js",
+  "types": "index.d.ts",
   "author": {
     "email": "hello@microlink.io",
     "name": "microlink.io",
@@ -60,6 +61,7 @@
     "by-feature.js",
     "by-provider.js",
     "index.js",
+    "index.d.ts",
     "recipes"
   ],
   "scripts": {
